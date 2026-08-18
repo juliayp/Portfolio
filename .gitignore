@@ -1,0 +1,34 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.vite/
+.pnpm-store/
+coverage/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local tooling and internal handoff notes
+.vscode/
+.idea/
+.vercel/
+qa-artifacts/
+HANDOFF.md
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+*.swp
