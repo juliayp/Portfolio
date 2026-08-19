@@ -1,3 +1,4 @@
+import { CarducciExperience } from './CarducciExperience'
 import './CarducciCaseStudy.css'
 
 export function CarducciCaseStudy({ copy, onClose }) {
@@ -76,6 +77,8 @@ export function CarducciCaseStudy({ copy, onClose }) {
           </ol>
         </div>
       </section>
+
+      <CarducciExperience copy={copy.experience} />
 
       <div className="case-study-close-wrap">
         <button className="case-study-close" type="button" onClick={onClose}>

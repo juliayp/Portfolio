@@ -417,6 +417,16 @@
   }
 }
 
+@media (min-width: 601px) {
+  .case-study-opening {
+    padding-block: clamp(4.25rem, 7.5vw, 8rem) clamp(4.5rem, 8vw, 8rem);
+  }
+
+  .case-study-opening-title {
+    margin-top: clamp(4.75rem, 10vw, 9rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .case-study-close,
   .case-study-close span:last-child {

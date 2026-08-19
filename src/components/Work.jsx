@@ -9,6 +9,8 @@ export function Work({ language }) {
   const copy = translations[language].work
   const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false)
   const projectRef = useRef(null)
+  const caseStudyRef = useRef(null)
+  const scrollTimeoutRef = useRef(null)
   const caseStudyId = 'carducci-case-study'
   const caseStudyActionLabel = isCaseStudyOpen ? copy.caseStudy.close : copy.cta
 
@@ -16,15 +18,28 @@ export function Work({ language }) {
     const nextOpenState = !isCaseStudyOpen
     setIsCaseStudyOpen(nextOpenState)
 
-    if (!nextOpenState) {
-      window.requestAnimationFrame(() => {
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-        projectRef.current?.scrollIntoView({
-          behavior: reduceMotion ? 'auto' : 'smooth',
-          block: 'start',
-        })
-      })
+    if (scrollTimeoutRef.current !== null) {
+      window.clearTimeout(scrollTimeoutRef.current)
+      scrollTimeoutRef.current = null
     }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const scrollToTarget = () => {
+      const target = nextOpenState ? caseStudyRef.current : projectRef.current
+
+      target?.scrollIntoView({
+        behavior: reduceMotion ? 'auto' : 'smooth',
+        block: 'start',
+      })
+      scrollTimeoutRef.current = null
+    }
+
+    if (nextOpenState && !reduceMotion) {
+      scrollTimeoutRef.current = window.setTimeout(scrollToTarget, 140)
+      return
+    }
+
+    window.requestAnimationFrame(scrollToTarget)
   }
 
   return (
@@ -96,6 +111,7 @@ export function Work({ language }) {
           <div
             className={`case-study-reveal${isCaseStudyOpen ? ' is-open' : ''}`}
             id={caseStudyId}
+            ref={caseStudyRef}
             aria-hidden={!isCaseStudyOpen}
           >
             <div className="case-study-reveal-inner">
