@@ -179,6 +179,28 @@
   justify-self: end;
 }
 
+/* Desktop-only rhythm refinements for the two quieter statements. */
+@media (min-width: 901px) {
+  .experience-day,
+  .experience-local {
+    padding-block: clamp(5rem, 8.5vw, 9rem);
+  }
+
+  .experience-day-title {
+    margin-top: clamp(3.25rem, 6.5vw, 6.5rem);
+    font-size: clamp(3.25rem, 7.15vw, 7.8rem);
+  }
+
+  .experience-day .experience-wide-figure,
+  .experience-local-layout {
+    margin-top: clamp(3.25rem, 6.5vw, 6.5rem);
+  }
+
+  .experience-location-figure {
+    width: min(110%, 43rem);
+  }
+}
+
 .experience-responsive-title {
   display: flex;
   flex-direction: column;
