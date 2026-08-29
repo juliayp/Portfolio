@@ -125,6 +125,224 @@ const sharedCaseStudy = Object.freeze({
       mobileAlt: 'Dicono di noi review section on mobile',
     },
   }),
+  development: Object.freeze({
+    number: '04',
+    label: 'THE DEVELOPMENT',
+    titleFirst: 'DESIGNED WITH',
+    titleSecond: 'INTENT.',
+    titleOutlineFirst: 'BUILT WITH',
+    titleOutlineSecond: 'CODE.',
+    body:
+      'The visual identity was only the beginning. Every interaction, responsive state and technical decision was built to support the experience.',
+    meta: [
+      {
+        label: 'FRONT-END',
+        value: 'React · JavaScript · CSS',
+      },
+      {
+        label: 'BUILD',
+        value: 'Vite',
+      },
+      {
+        label: 'FOCUS',
+        value: 'Responsive · Interaction · Accessibility',
+      },
+    ],
+    interaction: Object.freeze({
+      number: '02',
+      label: 'INTERACTION',
+      titleFirst: 'BUILT FOR',
+      titleSecond: 'INTERACTION.',
+      body:
+        'A menu that behaves like part of the interface — managing focus, motion and external content without taking the visitor away from the experience.',
+      visualLabel: 'MENU DRAWER / DESKTOP',
+      stateLabel: 'REACT · INTERACTION STATE',
+      imageAlt: 'Open Carducci desktop Menu Drawer displaying the external café menu',
+      annotations: [
+        {
+          number: '01',
+          label: 'FOCUS',
+          text: 'Keyboard focus stays inside the experience.',
+        },
+        {
+          number: '02',
+          label: 'LIFECYCLE',
+          text: 'External content loads only when needed.',
+        },
+        {
+          number: '03',
+          label: 'ACCESSIBILITY',
+          text: 'Escape · Backdrop · Reduced motion',
+        },
+      ],
+      codeLabel: 'MENU DRAWER / LIFECYCLE',
+      codeAriaLabel: 'Menu Drawer reduced-motion lifecycle code',
+      principleFirst: 'MOTION IS A PREFERENCE,',
+      principleSecond: 'NOT A REQUIREMENT.',
+    }),
+    gallery: Object.freeze({
+      number: '03',
+      label: 'GALLERY',
+      title: ['SCROLL.', 'DRAG.', 'SWIPE.'],
+      secondary: 'KEYBOARD, TOO.',
+      body: 'One gallery, designed to respond naturally across mouse, touch and keyboard input.',
+      galleryAriaLabel: 'Interactive horizontal Carducci gallery. Scroll, drag, swipe or use arrow keys to explore.',
+      imageAlts: [
+        'Guests outside Caffè Carducci during an evening event',
+        'Carducci bartender preparing a drink behind the bar',
+        'Friends enjoying an evening inside Caffè Carducci',
+        'Close-up of a cocktail being prepared',
+        'Carducci team serving freshly prepared food',
+        'Cocktails served at a Carducci table',
+      ],
+      inputs: [
+        {
+          number: '01',
+          label: 'WHEEL',
+          text: 'Vertical input → horizontal movement',
+        },
+        {
+          number: '02',
+          label: 'DRAG',
+          text: 'Mouse + pen pointer capture',
+        },
+        {
+          number: '03',
+          label: 'SWIPE',
+          text: 'Touch navigation',
+        },
+        {
+          number: '04',
+          label: 'KEYS',
+          text: 'Arrow-key lightbox navigation',
+        },
+      ],
+      codeLabel: 'GALLERY / HANDLE WHEEL',
+      codeAriaLabel: 'Real Carducci handleWheel implementation excerpt',
+      principleFirst: 'NATURAL INPUT.',
+      principleSecond: 'INTENTIONAL BEHAVIOUR.',
+    }),
+    responsive: Object.freeze({
+      number: '04',
+      label: 'RESPONSIVE',
+      titleFirst: 'RESPONSIVE',
+      titleSecond: 'BY DESIGN.',
+      secondaryFirst: 'NOT JUST SMALLER.',
+      secondarySecond: 'RECOMPOSED.',
+      body: 'The same visual language, deliberately recomposed for every screen.',
+      visualAriaLabel: 'The Carducci Hero recomposed across desktop, tablet and mobile screens',
+      screens: [
+        {
+          label: 'DESKTOP / 1440',
+          alt: 'Caffè Carducci Hero displayed in its desktop layout',
+        },
+        {
+          label: 'TABLET / 834',
+          alt: 'The same Caffè Carducci Hero recomposed for tablet',
+        },
+        {
+          label: 'MOBILE / 390',
+          alt: 'The same Caffè Carducci Hero recomposed for mobile',
+        },
+      ],
+      metrics: [
+        {
+          label: 'TESTED AT',
+          value: '1440 · 834 · 390',
+        },
+        {
+          label: 'LAYOUT BREAKPOINTS',
+          value: '1040 · 760 · 430',
+        },
+      ],
+      statements: [
+        {
+          number: '01',
+          label: 'LAYOUT',
+          text: 'Columns collapse and content order adapts.',
+        },
+        {
+          number: '02',
+          label: 'TYPE & MEDIA',
+          text: 'Typography, proportions and image crops respond to available space.',
+        },
+        {
+          number: '03',
+          label: 'INTERACTION',
+          text: 'Navigation, gallery and menu behaviour adapt for smaller screens.',
+        },
+      ],
+      tools: 'CSS GRID · FLEXBOX · CLAMP() · ASPECT-RATIO · DVH',
+    }),
+    privacy: Object.freeze({
+      number: '05',
+      label: 'PRIVACY & PERFORMANCE',
+      titleFirst: "WHAT DOESN'T LOAD",
+      titleSecond: 'MATTERS TOO.',
+      body:
+        'Google Maps stays unloaded until the visitor chooses to interact with it — reducing unnecessary external requests while keeping the location easy to access.',
+      visualAriaLabel: 'Carducci map before and after visitor activation',
+      beforeLabel: 'BEFORE INTERACTION',
+      previewLabel: 'LOCAL PREVIEW',
+      afterLabel: 'AFTER INTERACTION',
+      activeLabel: 'GOOGLE MAPS ACTIVE',
+      actionLabel: 'USER ACTION',
+      previewAlt: 'Local illustrated Carducci map preview before visitor interaction',
+      activeAlt: 'Google Maps active after the Carducci visitor chooses to load it',
+      principles: [
+        {
+          label: 'PRIVACY',
+          text: 'External content waits.',
+        },
+        {
+          label: 'PERFORMANCE',
+          text: 'Deferred iframe loading.',
+        },
+        {
+          label: 'CONTROL',
+          text: 'Activated by the visitor.',
+        },
+      ],
+      codeLabel: 'MAP / CONDITIONAL RENDERING',
+      codeAriaLabel: 'Real Carducci conditional map rendering excerpt',
+      codeNoteFirst: 'PREVIEW FIRST.',
+      codeNoteSecond: 'EXTERNAL ON REQUEST.',
+      closingFirst: 'LOAD LESS.',
+      closingSecond: 'ASK FIRST.',
+    }),
+    epilogue: Object.freeze({
+      markerFirst: 'DEVELOPMENT',
+      markerSecond: 'SUMMARY',
+      titleFirst: 'BUILT BEYOND',
+      titleSecond: 'THE SCREEN.',
+      body: 'The interface is what you see. The decisions behind it are what make it work.',
+      principles: [
+        {
+          number: '01',
+          label: 'INTERACTION',
+          details: 'Focus · Keyboard · Lifecycle',
+        },
+        {
+          number: '02',
+          label: 'INPUT',
+          details: 'Wheel · Drag · Touch · Keys',
+        },
+        {
+          number: '03',
+          label: 'ADAPTATION',
+          details: 'Layout · Type · Media',
+        },
+        {
+          number: '04',
+          label: 'CONTROL',
+          details: 'Motion · External content · Privacy',
+        },
+      ],
+      closingFirst: 'DESIGNED WITH INTENT.',
+      closingSecond: 'BUILT WITH CODE.',
+      completeLabel: 'CASE STUDY / COMPLETE',
+    }),
+  }),
 })
 
 export const translations = {
@@ -301,6 +519,220 @@ export const translations = {
             storyAlt: 'Sezione storia Carducci adattata al layout tablet',
             mobileCaption: 'RECENSIONI · MOBILE',
             mobileAlt: 'Sezione Dicono di noi su mobile',
+          },
+        },
+        development: {
+          ...sharedCaseStudy.development,
+          label: 'LO SVILUPPO',
+          body:
+            'L’identità visiva era solo l’inizio. Ogni interazione, stato responsive e scelta tecnica è stata sviluppata per supportare l’esperienza.',
+          meta: [
+            {
+              label: 'FRONT-END',
+              value: 'React · JavaScript · CSS',
+            },
+            {
+              label: 'BUILD',
+              value: 'Vite',
+            },
+            {
+              label: 'FOCUS',
+              value: 'Responsive · Interazione · Accessibilità',
+            },
+          ],
+          interaction: {
+            ...sharedCaseStudy.development.interaction,
+            label: 'INTERAZIONE',
+            titleFirst: 'COSTRUITO PER',
+            titleSecond: 'INTERAGIRE.',
+            body:
+              'Un menu che si comporta come parte dell’interfaccia — gestendo focus, movimento e contenuti esterni senza interrompere l’esperienza.',
+            visualLabel: 'CASSETTO MENU / DESKTOP',
+            stateLabel: 'REACT · STATO DI INTERAZIONE',
+            imageAlt: 'Menu Drawer Carducci aperto su desktop con il menu esterno del caffè',
+            annotations: [
+              {
+                number: '01',
+                label: 'FOCUS',
+                text: 'Il focus da tastiera resta all’interno dell’esperienza.',
+              },
+              {
+                number: '02',
+                label: 'CICLO DI VITA',
+                text: 'Il contenuto esterno viene caricato solo quando serve.',
+              },
+              {
+                number: '03',
+                label: 'ACCESSIBILITÀ',
+                text: 'Escape · Sfondo · Movimento ridotto',
+              },
+            ],
+            codeLabel: 'MENU DRAWER / CICLO DI VITA',
+            codeAriaLabel: 'Codice del ciclo di vita Menu Drawer con movimento ridotto',
+            principleFirst: 'IL MOVIMENTO È UNA PREFERENZA,',
+            principleSecond: 'NON UN REQUISITO.',
+          },
+          gallery: {
+            ...sharedCaseStudy.development.gallery,
+            label: 'GALLERIA',
+            title: ['SCORRI.', 'TRASCINA.', 'SFOGLIA.'],
+            secondary: 'ANCHE DA TASTIERA.',
+            body: 'Una sola galleria, progettata per rispondere in modo naturale a mouse, touch e tastiera.',
+            galleryAriaLabel:
+              'Galleria orizzontale interattiva Carducci. Scorri, trascina, sfoglia o usa i tasti freccia per esplorarla.',
+            imageAlts: [
+              'Ospiti all’esterno del Caffè Carducci durante un evento serale',
+              'Barman del Carducci mentre prepara un drink dietro il bancone',
+              'Amici durante una serata all’interno del Caffè Carducci',
+              'Primo piano della preparazione di un cocktail',
+              'Il team Carducci serve piatti appena preparati',
+              'Cocktail serviti a un tavolo del Carducci',
+            ],
+            inputs: [
+              {
+                number: '01',
+                label: 'ROTELLA',
+                text: 'Input verticale → movimento orizzontale',
+              },
+              {
+                number: '02',
+                label: 'TRASCINA',
+                text: 'Cattura del puntatore con mouse + penna',
+              },
+              {
+                number: '03',
+                label: 'SWIPE',
+                text: 'Navigazione touch',
+              },
+              {
+                number: '04',
+                label: 'TASTI',
+                text: 'Navigazione lightbox con i tasti freccia',
+              },
+            ],
+            codeLabel: 'GALLERIA / HANDLE WHEEL',
+            codeAriaLabel: 'Estratto reale dell’implementazione handleWheel di Carducci',
+            principleFirst: 'INPUT NATURALE.',
+            principleSecond: 'COMPORTAMENTO INTENZIONALE.',
+          },
+          responsive: {
+            ...sharedCaseStudy.development.responsive,
+            titleSecond: 'PER SCELTA.',
+            secondaryFirst: 'NON SOLO PIÙ PICCOLO.',
+            secondarySecond: 'RICOMPOSTO.',
+            body: 'Lo stesso linguaggio visivo, ricomposto intenzionalmente per ogni schermo.',
+            visualAriaLabel: 'L’Hero Carducci ricomposto per schermi desktop, tablet e mobile',
+            screens: [
+              {
+                label: 'DESKTOP / 1440',
+                alt: 'Hero di Caffè Carducci nel layout desktop',
+              },
+              {
+                label: 'TABLET / 834',
+                alt: 'Lo stesso Hero di Caffè Carducci ricomposto per tablet',
+              },
+              {
+                label: 'MOBILE / 390',
+                alt: 'Lo stesso Hero di Caffè Carducci ricomposto per mobile',
+              },
+            ],
+            metrics: [
+              {
+                label: 'TESTATO A',
+                value: '1440 · 834 · 390',
+              },
+              {
+                label: 'BREAKPOINT DI LAYOUT',
+                value: '1040 · 760 · 430',
+              },
+            ],
+            statements: [
+              {
+                number: '01',
+                label: 'LAYOUT',
+                text: 'Le colonne si riducono e l’ordine dei contenuti si adatta.',
+              },
+              {
+                number: '02',
+                label: 'TIPOGRAFIA E MEDIA',
+                text: 'Tipografia, proporzioni e ritagli delle immagini rispondono allo spazio disponibile.',
+              },
+              {
+                number: '03',
+                label: 'INTERAZIONE',
+                text: 'Navigazione, galleria e menu si adattano agli schermi più piccoli.',
+              },
+            ],
+          },
+          privacy: {
+            ...sharedCaseStudy.development.privacy,
+            label: 'PRIVACY E PERFORMANCE',
+            titleFirst: 'QUELLO CHE NON SI CARICA',
+            titleSecond: 'CONTA ANCHE.',
+            body:
+              'Google Maps resta disattivato finché il visitatore non sceglie di interagire — riducendo le richieste esterne non necessarie e mantenendo la posizione facile da raggiungere.',
+            visualAriaLabel: "Mappa Carducci prima e dopo l’attivazione da parte del visitatore",
+            beforeLabel: "PRIMA DELL’INTERAZIONE",
+            previewLabel: 'ANTEPRIMA LOCALE',
+            afterLabel: "DOPO L’INTERAZIONE",
+            activeLabel: 'GOOGLE MAPS ATTIVO',
+            actionLabel: "AZIONE DELL’UTENTE",
+            previewAlt: "Anteprima illustrata locale della mappa Carducci prima dell’interazione",
+            activeAlt: 'Google Maps attivo dopo che il visitatore sceglie di caricarlo',
+            principles: [
+              {
+                label: 'PRIVACY',
+                text: 'I contenuti esterni restano in attesa.',
+              },
+              {
+                label: 'PERFORMANCE',
+                text: 'Caricamento differito dell’iframe.',
+              },
+              {
+                label: 'CONTROLLO',
+                text: 'Attivato dal visitatore.',
+              },
+            ],
+            codeLabel: 'MAPPA / RENDERING CONDIZIONALE',
+            codeAriaLabel: 'Estratto reale del rendering condizionale della mappa Carducci',
+            codeNoteFirst: 'PRIMA L’ANTEPRIMA.',
+            codeNoteSecond: 'ESTERNO SU RICHIESTA.',
+            closingFirst: 'CARICA MENO.',
+            closingSecond: 'CHIEDI PRIMA.',
+          },
+          epilogue: {
+            ...sharedCaseStudy.development.epilogue,
+            markerFirst: 'SVILUPPO',
+            markerSecond: 'RIEPILOGO',
+            titleFirst: 'COSTRUITO OLTRE',
+            titleSecond: 'LO SCHERMO.',
+            body:
+              'L’interfaccia è ciò che vedi. Le decisioni che la sostengono sono ciò che la fanno funzionare.',
+            principles: [
+              {
+                number: '01',
+                label: 'INTERAZIONE',
+                details: 'Focus · Tastiera · Ciclo di vita',
+              },
+              {
+                number: '02',
+                label: 'INPUT',
+                details: 'Rotella · Trascina · Touch · Tasti',
+              },
+              {
+                number: '03',
+                label: 'ADATTAMENTO',
+                details: 'Layout · Tipografia · Media',
+              },
+              {
+                number: '04',
+                label: 'CONTROLLO',
+                details: 'Movimento · Contenuti esterni · Privacy',
+              },
+            ],
+            closingFirst: 'PROGETTATO CON INTENTO.',
+            closingSecond: 'COSTRUITO CON IL CODICE.',
+            completeLabel: 'CASE STUDY / COMPLETO',
           },
         },
         close: 'CHIUDI CASE STUDY',

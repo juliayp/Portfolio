@@ -1,4 +1,10 @@
 import { CarducciExperience } from './CarducciExperience'
+import { CarducciDevelopmentIntro } from './CarducciDevelopmentIntro'
+import { CarducciDevelopmentInteraction } from './CarducciDevelopmentInteraction'
+import { CarducciDevelopmentGallery } from './CarducciDevelopmentGallery'
+import { CarducciDevelopmentResponsive } from './CarducciDevelopmentResponsive'
+import { CarducciDevelopmentPrivacy } from './CarducciDevelopmentPrivacy'
+import { CarducciDevelopmentEpilogue } from './CarducciDevelopmentEpilogue'
 import './CarducciCaseStudy.css'
 
 export function CarducciCaseStudy({ copy, onClose }) {
@@ -79,6 +85,18 @@ export function CarducciCaseStudy({ copy, onClose }) {
       </section>
 
       <CarducciExperience copy={copy.experience} />
+
+      <CarducciDevelopmentIntro copy={copy.development} />
+
+      <CarducciDevelopmentInteraction copy={copy.development.interaction} />
+
+      <CarducciDevelopmentGallery copy={copy.development.gallery} />
+
+      <CarducciDevelopmentResponsive copy={copy.development.responsive} />
+
+      <CarducciDevelopmentPrivacy copy={copy.development.privacy} />
+
+      <CarducciDevelopmentEpilogue copy={copy.development.epilogue} />
 
       <div className="case-study-close-wrap">
         <button className="case-study-close" type="button" onClick={onClose}>
