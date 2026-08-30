@@ -18,6 +18,7 @@
   letter-spacing: 0.13em;
   line-height: 1.35;
   text-transform: uppercase;
+  padding-inline: var(--case-study-safe-inset);
 }
 
 .interaction-marker span {
@@ -55,6 +56,7 @@
 
 .interaction-intro-copy {
   width: min(100%, 38rem);
+  padding-inline: var(--case-study-safe-inset);
   margin: clamp(3.5rem, 6vw, 6rem) 4% 0 auto;
   color: #b8b8b2;
   font-size: clamp(0.95rem, 1.35vw, 1.2rem);
@@ -72,6 +74,7 @@
   justify-content: space-between;
   gap: 2rem;
   margin-inline: var(--page-gutter);
+  padding-inline: var(--case-study-safe-inset);
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(17, 17, 17, 0.18);
   color: #5f5f59;
@@ -131,6 +134,7 @@
 
 .interaction-annotation > span {
   display: block;
+  padding-inline: var(--case-study-safe-inset);
   color: #5f5f59;
   font-size: 0.54rem;
   font-weight: 600;
@@ -140,6 +144,7 @@
 }
 
 .interaction-annotation p {
+  padding-inline: var(--case-study-safe-inset);
   margin: 0.7rem 0 0;
   font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
   font-size: clamp(1rem, 1.55vw, 1.45rem);
@@ -196,6 +201,7 @@
 }
 
 .interaction-code-panel > p {
+  padding-inline: var(--case-study-safe-inset);
   margin: 0 0 clamp(2rem, 4vw, 4rem);
   color: #b8b8b2;
   font-size: 0.54rem;

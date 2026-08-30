@@ -17,6 +17,7 @@
   letter-spacing: 0.13em;
   line-height: 1.35;
   text-transform: uppercase;
+  padding-inline: var(--case-study-safe-inset);
 }
 
 .development-epilogue-marker i {
@@ -60,6 +61,7 @@
 
 .development-epilogue-body {
   max-width: 25rem;
+  padding-inline: var(--case-study-safe-inset);
   margin: 0 0 0.3rem;
   color: #b8b8b2;
   font-size: clamp(0.9rem, 1.18vw, 1.08rem);
@@ -90,6 +92,7 @@
 
 .development-epilogue-principle-label span,
 .development-epilogue-principle-label h3 {
+  padding-inline: var(--case-study-safe-inset);
   font-size: 0.56rem;
   font-weight: 600;
   letter-spacing: 0.13em;
@@ -108,6 +111,7 @@
 
 .development-epilogue-principles li > p {
   margin: 1.4rem 0 0;
+  padding-inline: var(--case-study-safe-inset);
   color: #b8b8b2;
   font-size: clamp(0.78rem, 0.95vw, 0.9rem);
   line-height: 1.55;
@@ -137,6 +141,7 @@
 
 .development-epilogue-complete {
   margin: 0 0 0.25rem;
+  padding-inline: var(--case-study-safe-inset);
   color: #c7ff00;
   font-size: 0.56rem;
   font-weight: 600;

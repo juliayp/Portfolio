@@ -18,6 +18,7 @@
   letter-spacing: 0.13em;
   line-height: 1.35;
   text-transform: uppercase;
+  padding-inline: var(--case-study-safe-inset);
 }
 
 .responsive-engineering-marker span {
@@ -91,6 +92,7 @@
 
 .responsive-engineering-body {
   max-width: 24rem;
+  padding-inline: var(--case-study-safe-inset);
   margin: clamp(1.75rem, 3vw, 3rem) 0 0;
   color: #b8b8b2;
   font-size: clamp(0.9rem, 1.18vw, 1.08rem);
@@ -112,6 +114,7 @@
 }
 
 .responsive-engineering-screen figcaption {
+  padding-inline: var(--case-study-safe-inset);
   margin-bottom: 0.7rem;
   color: #b8b8b2;
   font-size: 0.54rem;
@@ -166,6 +169,7 @@
 }
 
 .responsive-engineering-metrics dt {
+  padding-inline: var(--case-study-safe-inset);
   color: #b8b8b2;
   font-size: 0.56rem;
   font-weight: 600;
@@ -175,6 +179,7 @@
 }
 
 .responsive-engineering-metrics dd {
+  padding-inline: var(--case-study-safe-inset);
   margin: 0;
   font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
   font-size: clamp(1rem, 1.7vw, 1.55rem);
@@ -203,6 +208,7 @@
 
 .responsive-engineering-statement-number,
 .responsive-engineering-statements h3 {
+  padding-inline: var(--case-study-safe-inset);
   font-size: 0.58rem;
   font-weight: 600;
   letter-spacing: 0.13em;
@@ -220,6 +226,7 @@
 
 .responsive-engineering-statements p {
   max-width: 36rem;
+  padding-inline: var(--case-study-safe-inset);
   margin: 0;
   color: #b8b8b2;
   font-size: clamp(0.82rem, 1.08vw, 1rem);
@@ -227,6 +234,7 @@
 }
 
 .responsive-engineering-tools {
+  padding-inline: var(--case-study-safe-inset);
   margin: clamp(2rem, 3.5vw, 3.5rem) var(--page-gutter) 0;
   color: #b8b8b2;
   font-size: 0.56rem;

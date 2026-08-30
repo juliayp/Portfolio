@@ -41,6 +41,7 @@
   letter-spacing: 0.13em;
   line-height: 1.35;
   text-transform: uppercase;
+  padding-inline: var(--case-study-safe-inset);
 }
 
 .experience-marker span {
@@ -78,6 +79,7 @@
 
 .experience-intro > p {
   max-width: 37rem;
+  padding-inline: var(--case-study-safe-inset);
   margin: clamp(3rem, 5vw, 5rem) 5% 0 auto;
   color: #393934;
   font-size: clamp(1rem, 1.45vw, 1.3rem);
@@ -101,6 +103,7 @@
 }
 
 .experience-figure figcaption {
+  padding-inline: var(--case-study-safe-inset);
   margin-top: 0.75rem;
   color: #66665f;
   font-size: 0.58rem;
