@@ -4,7 +4,7 @@
 }
 
 .interaction-opening {
-  padding: clamp(5.5rem, 9vw, 9rem) var(--page-gutter) clamp(6.5rem, 11vw, 11rem);
+  padding: clamp(3rem, 4vw, 4rem) var(--page-gutter) clamp(3.75rem, 4.75vw, 4.75rem);
   background: #111111;
   color: #f4f3ee;
 }
@@ -30,7 +30,7 @@
 }
 
 .interaction-title {
-  margin: clamp(4.5rem, 8vw, 8rem) 0 0;
+  margin: clamp(2.5rem, 4vw, 4rem) 0 0;
   font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
   font-size: clamp(4.6rem, 10.2vw, 10.75rem);
   font-weight: 600;
@@ -57,14 +57,14 @@
 .interaction-intro-copy {
   width: min(100%, 38rem);
   padding-inline: var(--case-study-safe-inset);
-  margin: clamp(3.5rem, 6vw, 6rem) 4% 0 auto;
+  margin: clamp(2.25rem, 3.5vw, 3.5rem) 4% 0 auto;
   color: #b8b8b2;
   font-size: clamp(0.95rem, 1.35vw, 1.2rem);
   line-height: 1.58;
 }
 
 .interaction-evidence {
-  padding-top: clamp(5rem, 8vw, 8rem);
+  padding-top: clamp(3rem, 4vw, 4rem);
   background: #f4f3ee;
 }
 
@@ -90,12 +90,12 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto auto;
   align-items: center;
-  margin-top: clamp(4rem, 7vw, 7rem);
+  margin-top: clamp(2.5rem, 4vw, 4rem);
   padding-inline: var(--page-gutter);
 }
 
 .interaction-menu-figure {
-  grid-column: 2 / 12;
+  grid-column: 4 / 9;
   grid-row: 1;
   min-width: 0;
   margin: 0;
@@ -157,7 +157,7 @@
   grid-column: 1 / 4;
   grid-row: 1;
   align-self: start;
-  margin-top: 11%;
+  margin-top: 8%;
   padding-right: clamp(1rem, 2vw, 2rem);
 }
 
@@ -176,12 +176,12 @@
 .interaction-annotation--03 {
   grid-column: 2 / 6;
   grid-row: 2;
-  margin-top: clamp(2.5rem, 5vw, 5rem);
+  margin-top: clamp(2rem, 3.5vw, 3.5rem);
 }
 
 .interaction-code-stage {
-  margin-top: clamp(7rem, 12vw, 12rem);
-  padding: clamp(6rem, 10vw, 10rem) var(--page-gutter) clamp(6rem, 9vw, 9rem);
+  margin-top: clamp(3.5rem, 5vw, 5rem);
+  padding: clamp(3.5rem, 5vw, 5rem) var(--page-gutter) clamp(3.5rem, 5vw, 5rem);
   background: linear-gradient(to bottom, #f4f3ee 0 12%, #111111 12% 100%);
   color: #f4f3ee;
 }
@@ -189,20 +189,20 @@
 .interaction-code-layout {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: clamp(2rem, 3.5vw, 4rem);
   align-items: end;
 }
 
 .interaction-code-panel {
   grid-column: 1 / 8;
-  padding: clamp(2rem, 4vw, 4rem);
+  padding: clamp(1.5rem, 2.5vw, 2.5rem);
   border: 1px solid rgba(244, 243, 238, 0.24);
   background: #111111;
 }
 
 .interaction-code-panel > p {
   padding-inline: var(--case-study-safe-inset);
-  margin: 0 0 clamp(2rem, 4vw, 4rem);
+  margin: 0 0 clamp(1.5rem, 2.5vw, 2.5rem);
   color: #b8b8b2;
   font-size: 0.54rem;
   font-weight: 600;
@@ -277,10 +277,11 @@
 
 @media (max-width: 900px) {
   .interaction-opening {
-    padding-block: 6rem 7.5rem;
+    padding-block: 4rem 5rem;
   }
 
   .interaction-title {
+    margin-top: 2.5rem;
     font-size: clamp(4.2rem, 11.2vw, 6rem);
   }
 
@@ -289,7 +290,7 @@
   }
 
   .interaction-menu-figure {
-    grid-column: 1 / 13;
+    grid-column: 4 / 10;
   }
 
   .interaction-annotations {
@@ -297,8 +298,8 @@
     grid-column: 1 / 13;
     grid-row: 2;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .interaction-annotation {
@@ -322,7 +323,7 @@
   }
 
   .interaction-code-stage {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 
   .interaction-code-panel {
@@ -337,7 +338,7 @@
 
 @media (max-width: 600px) {
   .interaction-opening {
-    padding-block: 4.75rem 6rem;
+    padding-block: 3.5rem 4.25rem;
   }
 
   .interaction-marker {
@@ -346,7 +347,7 @@
   }
 
   .interaction-title {
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
     font-size: clamp(3.1rem, 13.2vw, 4.25rem);
     line-height: 0.81;
   }
@@ -356,12 +357,12 @@
   }
 
   .interaction-intro-copy {
-    margin-top: 3rem;
+    margin-top: 2.25rem;
     font-size: 0.9rem;
   }
 
   .interaction-evidence {
-    padding-top: 4.75rem;
+    padding-top: 3.25rem;
   }
 
   .interaction-technical-labels {
@@ -373,19 +374,19 @@
 
   .interaction-visual-composition {
     display: block;
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
   }
 
   .interaction-menu-figure {
-    width: calc(100% + (var(--page-gutter) * 2));
-    margin-inline: calc(var(--page-gutter) * -1);
+    width: min(100%, 19rem);
+    margin-inline: auto;
   }
 
   .interaction-annotations {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    margin-top: 3.75rem;
+    margin-top: 2.5rem;
   }
 
   .interaction-annotation {
@@ -404,8 +405,8 @@
   }
 
   .interaction-code-stage {
-    margin-top: 5rem;
-    padding-block: 5rem 5.5rem;
+    margin-top: 3.5rem;
+    padding-block: 3.75rem 4.25rem;
     background: #111111;
   }
 

@@ -16,7 +16,7 @@ const responsiveScreens = [
   },
 ]
 
-export function CarducciDevelopmentResponsive({ copy }) {
+export function CarducciDevelopmentResponsive({ copy, privacyCopy }) {
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -118,6 +118,69 @@ export function CarducciDevelopmentResponsive({ copy }) {
       <p className="responsive-engineering-tools" data-responsive-reveal>
         {copy.tools}
       </p>
+
+      <aside className="responsive-privacy" aria-label={privacyCopy.label}>
+        <header className="responsive-privacy-heading" data-responsive-reveal>
+          <div className="responsive-privacy-marker">
+            <span>{privacyCopy.number} /</span>
+            <p>{privacyCopy.label}</p>
+          </div>
+
+          <div className="responsive-privacy-heading-copy">
+            <p>{privacyCopy.body}</p>
+          </div>
+        </header>
+
+        <div className="responsive-privacy-flow" aria-label={privacyCopy.visualAriaLabel}>
+          <figure className="responsive-privacy-state responsive-privacy-state--preview" data-responsive-reveal>
+            <figcaption>
+              <span>{privacyCopy.beforeLabel}</span>
+              <strong>{privacyCopy.previewLabel}</strong>
+            </figcaption>
+            <img
+              src="/images/carducci-development/privacy/carducci-map-preview.png"
+              alt={privacyCopy.previewAlt}
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <div className="responsive-privacy-transition" data-responsive-reveal aria-hidden="true">
+            <span>{privacyCopy.actionLabel}</span>
+            <i />
+            <b>→</b>
+          </div>
+
+          <figure className="responsive-privacy-state responsive-privacy-state--active" data-responsive-reveal>
+            <figcaption>
+              <span>{privacyCopy.afterLabel}</span>
+              <strong>{privacyCopy.activeLabel}</strong>
+            </figcaption>
+            <img
+              src="/images/carducci-development/privacy/carducci-map-active.png"
+              alt={privacyCopy.activeAlt}
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+
+        <div className="responsive-privacy-footer" data-responsive-reveal>
+          <ul className="responsive-privacy-principles">
+            {privacyCopy.principles.map((principle) => (
+              <li key={principle.label}>
+                <span>{principle.label}</span>
+                <p>{principle.text}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="responsive-privacy-closing">
+            <span>{privacyCopy.closingFirst}</span>
+            <span>{privacyCopy.closingSecond}</span>
+          </p>
+        </div>
+      </aside>
     </section>
   )
 }

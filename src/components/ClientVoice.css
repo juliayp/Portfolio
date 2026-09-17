@@ -1,0 +1,211 @@
+.client-voice {
+  overflow: clip;
+  background: #c7ff00;
+  color: #111111;
+}
+
+.client-voice-inner {
+  padding-block: clamp(4.75rem, 7vw, 7rem) clamp(4.75rem, 7vw, 7rem);
+}
+
+.client-voice-marker {
+  margin: 0;
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.client-voice-marker,
+.client-voice-content,
+.client-voice-title,
+.client-voice-supporting,
+.client-voice-divider {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.client-voice.is-visible .client-voice-marker,
+.client-voice.is-visible .client-voice-content,
+.client-voice.is-visible .client-voice-title,
+.client-voice.is-visible .client-voice-supporting,
+.client-voice.is-visible .client-voice-divider {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 580ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.client-voice.is-visible .client-voice-content {
+  transition-delay: 100ms;
+}
+
+.client-voice.is-visible .client-voice-title {
+  transition-delay: 180ms;
+}
+
+.client-voice.is-visible .client-voice-supporting {
+  transition-delay: 300ms;
+}
+
+.client-voice.is-visible .client-voice-divider {
+  transition-delay: 420ms;
+}
+
+.client-voice-content {
+  margin-top: clamp(3.5rem, 6.5vw, 6.75rem);
+}
+
+.client-voice-title {
+  max-width: 100%;
+  margin: 0;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(3.35rem, 7.4vw, 8.1rem);
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  line-height: 0.84;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.client-voice-title > span {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+}
+
+.client-voice-title > span:nth-child(2) {
+  margin-left: clamp(1.5rem, 8vw, 8rem);
+}
+
+.client-voice-title > span:nth-child(3) {
+  margin-left: clamp(0.5rem, 3vw, 3rem);
+}
+
+.client-voice-supporting {
+  max-width: 35rem;
+  margin: clamp(2.25rem, 4.5vw, 4.5rem) 0 0 auto;
+  font-size: clamp(0.96rem, 1.15vw, 1.12rem);
+  line-height: 1.46;
+}
+
+.client-voice-marquee {
+  width: 100vw;
+  margin-top: clamp(2.5rem, 4.25vw, 4.5rem);
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.client-voice-marquee-track {
+  display: flex;
+  width: max-content;
+  color: transparent;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(2.25rem, 5.4vw, 5.25rem);
+  font-weight: 600;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #111111;
+  animation: client-voice-marquee 36s linear infinite;
+  will-change: transform;
+}
+
+.client-voice-marquee-group {
+  display: block;
+  flex: 0 0 auto;
+  padding-right: clamp(2.5rem, 8vw, 9rem);
+  white-space: nowrap;
+}
+
+@keyframes client-voice-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.client-voice-divider {
+  width: 100%;
+  margin-top: clamp(2.75rem, 4.5vw, 4.75rem);
+  border-top: 1px solid rgba(17, 17, 17, 0.5);
+}
+
+@media (max-width: 900px) {
+  .client-voice-title {
+    max-width: 100%;
+    font-size: clamp(3rem, 8.5vw, 5.8rem);
+  }
+
+  .client-voice-supporting {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .client-voice-inner {
+    padding-block: 4.5rem 4.75rem;
+  }
+
+  .client-voice-marker {
+    font-size: 0.6rem;
+  }
+
+  .client-voice-content {
+    margin-top: 3.25rem;
+  }
+
+  .client-voice-title {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 11.7vw, 4rem);
+    line-height: 0.88;
+  }
+
+  .client-voice-title > span:nth-child(2) {
+    margin-left: 1.2rem;
+  }
+
+  .client-voice-title > span:nth-child(3) {
+    margin-left: 0.4rem;
+  }
+
+  .client-voice-supporting {
+    max-width: 22rem;
+    margin-top: 2.25rem;
+    font-size: 0.92rem;
+  }
+
+  .client-voice-marquee {
+    margin-top: 2.5rem;
+  }
+
+  .client-voice-marquee-track {
+    font-size: clamp(1.8rem, 8.7vw, 3rem);
+  }
+
+  .client-voice-divider {
+    margin-top: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-voice-marker,
+  .client-voice-content,
+  .client-voice-title,
+  .client-voice-supporting,
+  .client-voice-divider {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .client-voice-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}

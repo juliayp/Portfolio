@@ -1,5 +1,5 @@
 const sharedWork = Object.freeze({
-  sectionNumber: '02 /',
+  sectionNumber: '04',
   projectIndex: '01',
   title: 'CAFFÈ CARDUCCI',
   values: Object.freeze({
@@ -16,6 +16,12 @@ const sharedCaseStudy = Object.freeze({
     subtitle: 'Caffè · Restaurant · Grosseto, Italy',
     status: 'DESIGN + DEVELOPMENT',
     year: '2026',
+  }),
+  openingV2: Object.freeze({
+    projectMarker: 'CASE STUDY .01',
+    projectLabel: 'THE PROJECT',
+    experienceMarker: '02 /',
+    experienceLabel: 'THE EXPERIENCE',
   }),
   project: Object.freeze({
     number: '01',
@@ -37,6 +43,13 @@ const sharedCaseStudy = Object.freeze({
       role: 'Design & Front-end Development',
       stack: 'React · JavaScript · CSS',
     }),
+    metadata: [
+      { label: 'ROLE', value: 'Design + Development' },
+      { label: 'TYPE', value: 'Caffè · Restaurant' },
+      { label: 'LOCATION', value: 'Grosseto, Italy' },
+      { label: 'CLIENT', value: 'Caffè Carducci' },
+      { label: 'YEAR', value: '2026' },
+    ],
   }),
   challenge: Object.freeze({
     number: '02',
@@ -78,35 +91,26 @@ const sharedCaseStudy = Object.freeze({
       caption: 'HOMEPAGE · DESKTOP',
       alt: 'Carducci website homepage with a full-width café photograph on desktop',
     },
-    storytelling: {
+    storyAtmosphere: {
       number: '02',
-      label: 'EDITORIAL STORYTELLING',
+      label: 'STORY + ATMOSPHERE',
       title: 'MORE THAN INFORMATION.',
       storyCaption: 'LA NOSTRA STORIA · EDITORIAL VIEW',
       storyAlt: 'La nostra storia section of the Carducci website',
       viviCaption: 'VIVI CAFFÈ CARDUCCI · DETAIL',
       viviAlt: 'Vivi Caffè Carducci section with editorial photography',
+      aperitivoCaption: 'FOOD & APERITIVO · DESKTOP',
+      aperitivoAlt: 'Carducci website section showing food and aperitivo imagery',
     },
-    day: {
+    usefulInRealLife: {
       number: '03',
-      label: 'FROM MORNING TO EVENING',
-      title: 'FROM MORNING TO EVENING.',
-      caption: 'FOOD & APERITIVO · DESKTOP',
-      alt: 'Carducci website section showing food and aperitivo imagery',
-    },
-    details: {
-      number: '04',
-      label: 'DETAILS THAT MATTER',
+      label: 'USEFUL IN REAL LIFE',
       title: 'SIMPLE WHERE IT MATTERS.',
-      caption: 'MENU OVERLAY · DESKTOP',
-      alt: 'Open Carducci website menu overlay with navigation options',
-    },
-    local: {
-      number: '05',
-      label: 'LOCAL BY DESIGN',
-      title: 'DESIGNED FOR A REAL PLACE.',
-      caption: 'LOCATION & MAP · MOBILE',
-      alt: 'Carducci website location section with a Grosseto map and contact details',
+      menuCaption: 'MENU OVERLAY · DESKTOP',
+      menuAlt: 'Open Carducci website menu overlay with navigation options',
+      localTitle: 'DESIGNED FOR A REAL PLACE.',
+      localCaption: 'LOCATION & MAP · MOBILE',
+      localAlt: 'Carducci website location section with a Grosseto map and contact details',
     },
     responsive: {
       number: '06',
@@ -343,6 +347,68 @@ const sharedCaseStudy = Object.freeze({
       completeLabel: 'CASE STUDY / COMPLETE',
     }),
   }),
+  result: Object.freeze({
+    markerNumber: '05',
+    markerLabel: 'THE RESULT',
+    titleFirst: 'FROM A LOCAL PLACE,',
+    titleSecond: 'TO A DIGITAL EXPERIENCE.',
+    body: 'A complete digital presence shaped around the character, rhythm and everyday experience of Caffè Carducci.',
+    caption: 'FINAL EXPERIENCE / DESKTOP',
+    secondaryCaption: 'CAFFÈ CARDUCCI · GROSSETO',
+    imageAlt: 'Final desktop homepage experience for Caffè Carducci in Grosseto',
+    testimonial: Object.freeze({
+      markerLabel: 'CLIENT TESTIMONIAL',
+      quote:
+        'The site immediately felt welcoming and easy to understand, with simple and intuitive connections to our social media. It reflects our genuine simplicity. What I appreciated most was its ease of use, the social links and the interactive maps showing our location. I will certainly share your contact with others in our sector.',
+      author: 'FABIO PERIN',
+      role: 'Owner, Caffè Carducci',
+      note: 'TRANSLATED FROM THE ORIGINAL ITALIAN',
+    }),
+    outcome: Object.freeze({
+      markerNumber: '02',
+      markerLabel: 'OUTCOME',
+      titleFirst: 'ONE EXPERIENCE.',
+      titleSecond: 'EVERY TOUCHPOINT.',
+      supporting:
+        'The result is more than a website. It is one connected experience — from first impression to menu, atmosphere, location and access.',
+      rows: [
+        {
+          number: '01',
+          label: 'IDENTITY',
+          word: 'IDENTITY',
+          statement: 'Feels unmistakably Carducci.',
+          detail:
+            'Photography, typography, colour and pacing work together to preserve the character of the real place.',
+        },
+        {
+          number: '02',
+          label: 'DISCOVERY',
+          word: 'DISCOVERY',
+          statement: 'Everything important, easy to find.',
+          detail:
+            'Menu, atmosphere, location and essential information live inside one clear experience.',
+        },
+        {
+          number: '03',
+          label: 'INTERACTION',
+          word: 'INTERACTION',
+          statement: 'Natural ways to explore.',
+          detail:
+            'Navigation, gallery and menu interactions respond to the way people actually browse across devices.',
+        },
+        {
+          number: '04',
+          label: 'ACCESS',
+          word: 'ACCESS',
+          statement: 'Designed for different users and screens.',
+          detail:
+            'Responsive layouts, keyboard support, motion preferences and deliberate external-content loading extend the experience beyond visuals.',
+        },
+      ],
+      closingFirst: 'DIFFERENT TOUCHPOINTS.',
+      closingSecond: 'ONE CARDUCCI.',
+    }),
+  }),
 })
 
 export const translations = {
@@ -356,22 +422,110 @@ export const translations = {
       about: 'ABOUT',
       contact: 'CONTACT',
     },
+    navContext: {
+      work: 'VIEW PROJECTS ↗',
+      about: 'JULIA — FRONT-END DEVELOPER',
+      contact: 'LET’S TALK ↗',
+    },
     status: 'AVAILABLE FOR PROJECTS',
-    description: 'Front-End Developer based in Tuscany. I build modern, responsive websites for real businesses.',
+    heroGreeting: 'Hi! I’m Julia Yaneva. Based in Tuscany, Italy.',
+    heroContactLabel: 'Email Julia Yaneva',
+    heroContactText: ['LET’S', 'TALK'],
+    description: [
+      'I TURN IDEAS INTO DISTINCTIVE, RESPONSIVE WEBSITES FOR REAL BUSINESSES.',
+      'I LOVE BOLD TYPOGRAPHY, EDITORIAL DESIGN AND THOUGHTFUL DETAILS.',
+      'I LOVE NATURE, PIZZA AND ART.',
+    ],
+    playWithMe: ['CLICK ME'],
     scroll: 'SCROLL TO EXPLORE',
     menu: 'MENU',
     close: 'CLOSE',
+    about: {
+      marker: '01 / ABOUT',
+      mobileIntro: 'HI, I’M JULIA.',
+      titleLines: ['I DESIGN FOR', 'REAL PEOPLE.', 'I BUILD FOR', 'REAL BUSINESSES.'],
+      titleHighlights: [null, 'PEOPLE.', null, 'BUSINESSES.'],
+      bioLabel: 'A LITTLE ABOUT ME',
+      paragraphs: [
+        'I’m Julia, a front-end developer based in Tuscany, Italy. I combine visual direction and clean code to create websites that feel distinctive, intuitive and genuinely useful.',
+        'My path into web development started with three years of studying front-end. Over time, I became just as interested in how a website feels as in how it works.',
+        'Today, I bring those two sides together to create thoughtful digital experiences for real businesses.',
+        'Every decision should have a reason, and every website should feel like it belongs to the business behind it.',
+      ],
+      meta: 'TUSCANY, ITALY · DESIGN + DEVELOPMENT · AVAILABLE REMOTELY',
+      playgroundLabel: 'Interactive design concepts',
+      selectConcept: 'Select concept',
+      concepts: {
+        design: 'DESIGN',
+        code: 'CODE',
+        people: 'PEOPLE',
+        business: 'BUSINESS',
+      },
+      conceptRoles: {
+        design: ['UI/UX', 'TYPOGRAPHY', 'VISUAL DIRECTION'],
+        code: ['REACT', 'JAVASCRIPT', 'CSS'],
+        people: ['USERS', 'IDEAS', 'REAL NEEDS'],
+        business: ['STRATEGY', 'SOLUTIONS', 'GROWTH'],
+      },
+      hint: 'MOVE YOUR CURSOR →',
+      reset: 'RESET ↺',
+      relations: {
+        experience: 'DESIGN + CODE = EXPERIENCE',
+        useful: 'USEFUL, NOT JUST BEAUTIFUL.',
+      },
+    },
+    approach: {
+      marker: '03 / APPROACH',
+      kicker: 'HOW I WORK',
+      titleLines: ['FROM CHARACTER,', 'TO EXPERIENCE.'],
+      summary:
+        'Every project starts with understanding your business — its character, goals and audience. From there, we move through a clear process from first ideas to a finished website.',
+      principles: [
+        {
+          title: 'DISCOVER',
+          description:
+            'We start with a conversation about your business, goals, audience and what the website needs to achieve.',
+        },
+        {
+          title: 'DEFINE',
+          description:
+            'Together, we agree on a clear direction for the project — its style, structure, photos/images and priorities — before moving into development.',
+        },
+        {
+          title: 'DESIGN + BUILD',
+          description:
+            'I turn that direction into a responsive website, bringing design and development together as one connected process.',
+        },
+        {
+          title: 'TEST + LAUNCH',
+          description:
+            'I test the website across devices, refine the details and prepare everything for a confident launch.',
+        },
+      ],
+      closing: 'CLEAR PROCESS. OPEN COMMUNICATION. NO SURPRISES.',
+      tools: 'REACT · JAVASCRIPT · CSS · RESPONSIVE · ACCESSIBILITY',
+    },
     work: {
       ...sharedWork,
-      heading: 'SELECTED WORK',
-      type: 'Restaurant Website · Grosseto, Italy',
+      sectionLabel: 'FEATURED WORK',
+      heading: 'SELECTED WORK.',
+      type: 'DESIGN + DEVELOPMENT · GROSSETO, ITALY · 2026',
       labels: {
         role: 'ROLE',
         stack: 'STACK',
         year: 'YEAR',
       },
       cta: 'VIEW CASE',
+      liveWebsite: 'VIEW LIVE WEBSITE',
       alt: 'Caffè Carducci coffee cup inside the café in Grosseto',
+      drawer: {
+        marker: 'WORK / INDEX',
+        heading: 'SELECTED WORK',
+        close: 'CLOSE',
+        projectType: 'DESIGN + DEVELOPMENT',
+        projectMeta: 'GROSSETO, ITALY · 2026',
+        viewCase: 'VIEW CASE',
+      },
       caseStudy: {
         ...sharedCaseStudy,
         opening: {
@@ -379,6 +533,27 @@ export const translations = {
           subtitle: 'Caffè · Restaurant · Grosseto, Italy',
         },
         close: 'CLOSE CASE STUDY',
+      },
+    },
+    clientVoice: {
+      marker: '05 / WHY IT MATTERS',
+      titleLines: ['A WEBSITE SHOULD', 'FEEL LIKE YOUR', 'BUSINESS. NOT MINE.'],
+      supporting:
+        'Every business has its own character. My job is not to impose a style, but to find the visual direction that belongs to yours — and turn it into a clear, memorable digital experience.',
+      marquee: 'YOUR BUSINESS · YOUR CHARACTER · YOUR WEBSITE · YOUR EXPERIENCE ·',
+    },
+    contact: {
+      marker: '06 / CONTACT',
+      titleLines: ['HAVE A PROJECT?', 'LET’S MAKE IT REAL.'],
+      email: 'Julia.webcreative@gmail.com',
+      emailHref: 'mailto:Julia.webcreative@gmail.com',
+      emailLabel: 'Email Julia Yaneva',
+      meta: 'TUSCANY, ITALY · AVAILABLE REMOTELY',
+      linksLabel: 'Contact links',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/julia-yaneva-84013321b/',
+        github: 'https://github.com/juliayp',
+        backToTop: 'BACK TO TOP',
       },
     },
   },
@@ -392,26 +567,119 @@ export const translations = {
       about: 'CHI SONO',
       contact: 'CONTATTI',
     },
+    navContext: {
+      work: 'GUARDA I PROGETTI ↗',
+      about: 'JULIA — FRONT-END DEVELOPER',
+      contact: 'PARLIAMONE ↗',
+    },
     status: 'DISPONIBILE PER NUOVI PROGETTI',
-    description: 'Front-End Developer con base in Toscana. Creo siti web moderni e responsive per attività reali.',
+    heroGreeting: 'Ciao! Sono Julia Yaneva. Vivo in Toscana, Italia.',
+    heroContactLabel: 'Scrivi a Julia Yaneva via email',
+    heroContactText: ['PARLIAMO'],
+    description: [
+      'TRASFORMO LE IDEE IN SITI WEB ORIGINALI E RESPONSIVE PER ATTIVITÀ REALI.',
+      'AMO LA TIPOGRAFIA AUDACE, IL DESIGN EDITORIALE E I DETTAGLI CURATI.',
+      'AMO LA NATURA, LA PIZZA E L’ARTE.',
+    ],
+    playWithMe: ['CLICCA QUI'],
     scroll: 'SCORRI PER ESPLORARE',
     menu: 'MENU',
     close: 'CHIUDI',
+    about: {
+      marker: '01 / CHI SONO',
+      mobileIntro: 'CIAO, SONO JULIA.',
+      titleLines: ['PROGETTO PER', 'PERSONE REALI.', 'SVILUPPO PER', 'ATTIVITÀ REALI.'],
+      titleHighlights: [null, 'PERSONE', null, 'ATTIVITÀ'],
+      bioLabel: 'QUALCOSA SU DI ME',
+      paragraphs: [
+        'Sono Julia, front-end developer con base in Toscana, Italia. Unisco direzione visiva e codice pulito per creare siti web riconoscibili, intuitivi e realmente utili.',
+        'Il mio percorso nello sviluppo web è iniziato con tre anni di studio del front-end. Con il tempo, mi sono interessata tanto a come un sito fa sentire le persone quanto a come funziona.',
+        'Oggi unisco questi due aspetti per creare esperienze digitali curate per attività reali.',
+        'Ogni scelta dovrebbe avere una ragione e ogni sito dovrebbe sembrare davvero appartenere all’attività che rappresenta.',
+      ],
+      meta: 'TOSCANA, ITALIA · DESIGN + SVILUPPO · DISPONIBILE DA REMOTO',
+      playgroundLabel: 'Concetti interattivi di design',
+      selectConcept: 'Seleziona concetto',
+      concepts: {
+        design: 'DESIGN',
+        code: 'CODICE',
+        people: 'PERSONE',
+        business: 'ATTIVITÀ',
+      },
+      conceptRoles: {
+        design: ['UI/UX', 'TIPOGRAFIA', 'DIREZIONE VISIVA'],
+        code: ['REACT', 'JAVASCRIPT', 'CSS'],
+        people: ['UTENTI', 'IDEE', 'ESIGENZE REALI'],
+        business: ['STRATEGIA', 'SOLUZIONI', 'CRESCITA'],
+      },
+      hint: 'MUOVI IL CURSORE →',
+      reset: 'RESET ↺',
+      relations: {
+        experience: 'DESIGN + CODICE = ESPERIENZA',
+        useful: 'UTILE, NON SOLO BELLO.',
+      },
+    },
+    approach: {
+      marker: '03 / APPROCCIO',
+      kicker: 'COME LAVORO',
+      titleLines: ['DAL CARATTERE,', 'ALL’ESPERIENZA.'],
+      summary:
+        'Ogni progetto inizia dalla comprensione della tua attività — il suo carattere, i suoi obiettivi e il suo pubblico. Da qui seguiamo un processo chiaro, dalle prime idee fino al sito completo.',
+      principles: [
+        {
+          title: 'SCOPERTA',
+          description:
+            'Iniziamo con una conversazione sulla tua attività, i tuoi obiettivi, il tuo pubblico e ciò che il sito deve raggiungere.',
+        },
+        {
+          title: 'DEFINIRE',
+          description:
+            'Insieme concordiamo una direzione chiara per il progetto — stile, struttura, foto/immagini e priorità — prima di passare allo sviluppo.',
+        },
+        {
+          title: 'DESIGN + SVILUPPO',
+          description:
+            'Trasformo questa direzione in un sito responsive, unendo design e sviluppo in un unico processo coerente.',
+        },
+        {
+          title: 'TEST + LANCIO',
+          description:
+            'Testo il sito su diversi dispositivi, perfeziono i dettagli e preparo tutto per un lancio sicuro.',
+        },
+      ],
+      closing: 'PROCESSO CHIARO. COMUNICAZIONE APERTA. NESSUNA SORPRESA.',
+      tools: 'REACT · JAVASCRIPT · CSS · RESPONSIVE · ACCESSIBILITÀ',
+    },
     work: {
       ...sharedWork,
-      heading: 'PROGETTI SELEZIONATI',
-      type: 'Sito web per ristorante · Grosseto, Italia',
+      sectionLabel: 'PROGETTO IN EVIDENZA',
+      heading: 'PROGETTO SELEZIONATO.',
+      type: 'DESIGN E SVILUPPO · GROSSETO, ITALIA · 2026',
       labels: {
         role: 'RUOLO',
         stack: 'STACK',
         year: 'ANNO',
       },
       cta: 'SCOPRI IL PROGETTO',
+      liveWebsite: 'VISITA IL SITO',
       alt: 'Tazzina di Caffè Carducci all’interno del locale a Grosseto',
+      drawer: {
+        marker: 'PROGETTI / INDICE',
+        heading: 'PROGETTI SELEZIONATI',
+        close: 'CHIUDI',
+        projectType: 'DESIGN E SVILUPPO',
+        projectMeta: 'GROSSETO, ITALIA · 2026',
+        viewCase: 'SCOPRI IL PROGETTO',
+      },
       caseStudy: {
         opening: {
           ...sharedCaseStudy.opening,
           subtitle: 'Caffè · Ristorante · Grosseto, Italia',
+        },
+        openingV2: {
+          ...sharedCaseStudy.openingV2,
+          projectLabel: 'IL PROGETTO',
+          experienceLabel: 'L’ESPERIENZA',
         },
         project: {
           ...sharedCaseStudy.project,
@@ -433,6 +701,13 @@ export const translations = {
             role: 'Design e sviluppo front-end',
             stack: 'React · JavaScript · CSS',
           },
+          metadata: [
+            { label: 'RUOLO', value: 'Design e sviluppo' },
+            { label: 'TIPO', value: 'Caffè · Ristorante' },
+            { label: 'LUOGO', value: 'Grosseto, Italia' },
+            { label: 'CLIENTE', value: 'Caffè Carducci' },
+            { label: 'ANNO', value: '2026' },
+          ],
         },
         challenge: {
           ...sharedCaseStudy.challenge,
@@ -474,35 +749,26 @@ export const translations = {
             caption: 'HOMEPAGE · DESKTOP',
             alt: 'Homepage del sito Carducci con una fotografia del caffè a tutta larghezza su desktop',
           },
-          storytelling: {
+          storyAtmosphere: {
             number: '02',
-            label: 'RACCONTO EDITORIALE',
+            label: 'STORIA + ATMOSFERA',
             title: 'PIÙ CHE INFORMAZIONI.',
             storyCaption: 'LA NOSTRA STORIA · VISTA EDITORIALE',
             storyAlt: 'Sezione La nostra storia del sito Carducci',
             viviCaption: 'VIVI CAFFÈ CARDUCCI · DETTAGLIO',
             viviAlt: 'Sezione Vivi Caffè Carducci con fotografia editoriale',
+            aperitivoCaption: 'CUCINA E APERITIVO · DESKTOP',
+            aperitivoAlt: 'Sezione del sito Carducci dedicata alla cucina e all’aperitivo',
           },
-          day: {
+          usefulInRealLife: {
             number: '03',
-            label: 'DALLA MATTINA ALLA SERA',
-            title: 'DALLA MATTINA ALLA SERA.',
-            caption: 'CUCINA E APERITIVO · DESKTOP',
-            alt: 'Sezione del sito Carducci dedicata alla cucina e all’aperitivo',
-          },
-          details: {
-            number: '04',
-            label: 'DETTAGLI CHE CONTANO',
+            label: 'UTILE OGNI GIORNO',
             title: 'SEMPLICE DOVE CONTA.',
-            caption: 'MENU · DESKTOP',
-            alt: 'Menu di navigazione aperto del sito Carducci su desktop',
-          },
-          local: {
-            number: '05',
-            label: 'LOCALE PER SCELTA',
-            title: 'PENSATO PER UN LUOGO REALE.',
-            caption: 'LUOGO E MAPPA · MOBILE',
-            alt: 'Sezione del sito Carducci con mappa di Grosseto e informazioni di contatto',
+            menuCaption: 'MENU · DESKTOP',
+            menuAlt: 'Menu di navigazione aperto del sito Carducci su desktop',
+            localTitle: 'PENSATO PER UN LUOGO REALE.',
+            localCaption: 'LUOGO E MAPPA · MOBILE',
+            localAlt: 'Sezione del sito Carducci con mappa di Grosseto e informazioni di contatto',
           },
           responsive: {
             number: '06',
@@ -735,7 +1001,90 @@ export const translations = {
             completeLabel: 'CASE STUDY / COMPLETO',
           },
         },
+        result: {
+          markerNumber: '05',
+          markerLabel: 'IL RISULTATO',
+          titleFirst: 'DA UN LUOGO DEL TERRITORIO,',
+          titleSecond: 'A UN’ESPERIENZA DIGITALE.',
+          body: 'Una presenza digitale completa, plasmata dal carattere, dal ritmo e dall’esperienza quotidiana del Caffè Carducci.',
+          caption: 'ESPERIENZA FINALE / DESKTOP',
+          secondaryCaption: 'CAFFÈ CARDUCCI · GROSSETO',
+          imageAlt: 'Esperienza finale della homepage desktop di Caffè Carducci a Grosseto',
+          testimonial: {
+            markerLabel: 'TESTIMONIANZA DEL CLIENTE',
+            quote:
+              'Vedendo il sito mi è subito sembrato molto carino e facilmente comprensibile, con molte connessioni con i nostri social semplici ed intuitive… Il sito rispecchia la nostra genuina semplicità. La facilità di utilizzo, i richiami social e le mappe interattive sulla nostra localizzazione sono state sicuramente la cosa che mi è piaciuta di più… sicuramente darò il tuo contatto ad altri interessati del nostro settore.',
+            author: 'FABIO PERIN',
+            role: 'Titolare, Caffè Carducci',
+            note: 'TESTIMONIANZA ORIGINALE',
+          },
+          outcome: {
+            markerNumber: '02',
+            markerLabel: 'RISULTATO',
+            titleFirst: 'UN’UNICA ESPERIENZA.',
+            titleSecond: 'OGNI PUNTO DI CONTATTO.',
+            supporting:
+              'Il risultato è più di un sito web. È un’unica esperienza connessa — dal primo impatto al menu, dall’atmosfera al luogo e all’accesso.',
+            rows: [
+              {
+                number: '01',
+                label: 'IDENTITÀ',
+                word: 'IDENTITÀ',
+                statement: 'Inconfondibilmente Carducci.',
+                detail:
+                  'Fotografia, tipografia, colore e ritmo lavorano insieme per preservare il carattere del luogo reale.',
+              },
+              {
+                number: '02',
+                label: 'SCOPERTA',
+                word: 'SCOPERTA',
+                statement: 'Tutto ciò che conta, facile da trovare.',
+                detail:
+                  'Menu, atmosfera, luogo e informazioni essenziali convivono in un’unica esperienza chiara.',
+              },
+              {
+                number: '03',
+                label: 'INTERAZIONE',
+                word: 'INTERAZIONE',
+                statement: 'Modi naturali di esplorare.',
+                detail:
+                  'Navigazione, galleria e interazioni del menu rispondono al modo in cui le persone esplorano davvero sui diversi dispositivi.',
+              },
+              {
+                number: '04',
+                label: 'ACCESSO',
+                word: 'ACCESSO',
+                statement: 'Pensato per utenti e schermi diversi.',
+                detail:
+                  'Layout responsive, supporto da tastiera, preferenze di movimento e caricamento intenzionale dei contenuti esterni estendono l’esperienza oltre l’aspetto visivo.',
+              },
+            ],
+            closingFirst: 'PUNTI DI CONTATTO DIVERSI.',
+            closingSecond: 'UN SOLO CARDUCCI.',
+          },
+        },
         close: 'CHIUDI CASE STUDY',
+      },
+    },
+    clientVoice: {
+      marker: '05 / PERCHÉ CONTA',
+      titleLines: ['UN SITO DOVREBBE', 'PARLARE DELLA TUA', 'ATTIVITÀ. NON DI ME.'],
+      supporting:
+        'Ogni attività ha un carattere unico. Il mio compito non è imporre uno stile, ma trovare la direzione visiva che le appartiene — e trasformarla in un’esperienza digitale chiara e memorabile.',
+      marquee: 'IL TUO BUSINESS · IL TUO CARATTERE · IL TUO SITO · LA TUA ESPERIENZA ·',
+    },
+    contact: {
+      marker: '06 / CONTATTI',
+      titleLines: ['HAI UN PROGETTO?', 'RENDIAMOLO REALE.'],
+      email: 'Julia.webcreative@gmail.com',
+      emailHref: 'mailto:Julia.webcreative@gmail.com',
+      emailLabel: 'Scrivi a Julia Yaneva via email',
+      meta: 'TOSCANA, ITALIA · DISPONIBILE DA REMOTO',
+      linksLabel: 'Link di contatto',
+      links: {
+        linkedin: 'https://www.linkedin.com/in/julia-yaneva-84013321b/',
+        github: 'https://github.com/juliayp',
+        backToTop: 'TORNA SU',
       },
     },
   },

@@ -1,6 +1,6 @@
 .carducci-development-gallery {
   overflow: clip;
-  padding-block: clamp(5.5rem, 9vw, 9rem) clamp(6rem, 10vw, 10rem);
+  padding-block: clamp(4.5rem, 7vw, 7rem) clamp(6rem, 10vw, 10rem);
   background: #f4f3ee;
   color: #111111;
 }
@@ -35,13 +35,13 @@
   grid-template-columns: minmax(0, 8fr) minmax(17rem, 3fr);
   gap: clamp(2.5rem, 6vw, 7rem);
   align-items: end;
-  margin-top: clamp(4rem, 7vw, 7rem);
+  margin-top: clamp(3.25rem, 5vw, 5rem);
 }
 
 .gallery-engineering-title {
   margin: 0;
   font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
-  font-size: clamp(5rem, 10.4vw, 10.8rem);
+  font-size: clamp(5rem, 8.8vw, 9.4rem);
   font-weight: 600;
   letter-spacing: -0.09em;
   line-height: 0.76;
@@ -93,7 +93,7 @@
 
 .gallery-engineering-viewport {
   width: 100%;
-  margin-top: clamp(5.5rem, 9vw, 9rem);
+  margin-top: clamp(4.5rem, 6vw, 6rem);
   overflow-x: auto;
   overflow-y: hidden;
   cursor: grab;

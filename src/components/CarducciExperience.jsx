@@ -59,22 +59,8 @@ export function CarducciExperience({ copy }) {
     <section
       className="carducci-experience"
       ref={experienceRef}
-      aria-labelledby="carducci-experience-title"
+      aria-labelledby="experience-first-title"
     >
-      <header className="experience-intro experience-warm">
-        <div data-experience-reveal>
-          <ExperienceMarker
-            number={copy.intro.number}
-            label={copy.intro.label}
-            id="carducci-experience-marker"
-          />
-        </div>
-        <h2 id="carducci-experience-title" data-experience-reveal>
-          {copy.intro.title}
-        </h2>
-        <p data-experience-reveal>{copy.intro.text}</p>
-      </header>
-
       <section
         className="experience-section experience-first experience-warm"
         aria-labelledby="experience-first-title"
@@ -93,134 +79,65 @@ export function CarducciExperience({ copy }) {
       </section>
 
       <section
-        className="experience-section experience-storytelling experience-warm"
-        aria-labelledby="experience-storytelling-title"
+        className="experience-section experience-story-atmosphere experience-warm"
+        aria-labelledby="experience-story-atmosphere-title"
       >
         <div data-experience-reveal>
           <ExperienceMarker
-            number={copy.storytelling.number}
-            label={copy.storytelling.label}
-            id="experience-storytelling-title"
+            number={copy.storyAtmosphere.number}
+            label={copy.storyAtmosphere.label}
+            id="experience-story-atmosphere-title"
           />
         </div>
         <h3 className="experience-display-title" data-experience-reveal>
-          {copy.storytelling.title}
+          {copy.storyAtmosphere.title}
         </h3>
-        <div className="experience-story-composition">
-          <figure className="experience-figure experience-story-main" data-experience-reveal>
-            <ExperienceImage src={images.story} alt={copy.storytelling.storyAlt} />
-            <figcaption>{copy.storytelling.storyCaption}</figcaption>
+        <div className="experience-atmosphere-composition">
+          <figure className="experience-figure experience-atmosphere-story" data-experience-reveal>
+            <ExperienceImage src={images.story} alt={copy.storyAtmosphere.storyAlt} />
+            <figcaption>{copy.storyAtmosphere.storyCaption}</figcaption>
           </figure>
-          <figure className="experience-figure experience-story-aside" data-experience-reveal>
-            <ExperienceImage src={images.vivi} alt={copy.storytelling.viviAlt} />
-            <figcaption>{copy.storytelling.viviCaption}</figcaption>
+          <figure className="experience-figure experience-atmosphere-vivi" data-experience-reveal>
+            <ExperienceImage src={images.vivi} alt={copy.storyAtmosphere.viviAlt} />
+            <figcaption>{copy.storyAtmosphere.viviCaption}</figcaption>
+          </figure>
+          <figure className="experience-figure experience-atmosphere-aperitivo" data-experience-reveal>
+            <ExperienceImage src={images.aperitivo} alt={copy.storyAtmosphere.aperitivoAlt} />
+            <figcaption>{copy.storyAtmosphere.aperitivoCaption}</figcaption>
           </figure>
         </div>
       </section>
 
       <section
-        className="experience-section experience-day experience-warm"
-        aria-labelledby="experience-day-title"
+        className="experience-section experience-useful experience-dark"
+        aria-labelledby="experience-useful-title"
       >
         <div data-experience-reveal>
           <ExperienceMarker
-            number={copy.day.number}
-            label={copy.day.label}
-            id="experience-day-title"
-          />
-        </div>
-        <h3 className="experience-display-title experience-day-title" data-experience-reveal>
-          {copy.day.title}
-        </h3>
-        <figure className="experience-figure experience-wide-figure" data-experience-reveal>
-          <ExperienceImage src={images.aperitivo} alt={copy.day.alt} />
-          <figcaption>{copy.day.caption}</figcaption>
-        </figure>
-      </section>
-
-      <section
-        className="experience-section experience-details experience-dark"
-        aria-labelledby="experience-details-title"
-      >
-        <div data-experience-reveal>
-          <ExperienceMarker
-            number={copy.details.number}
-            label={copy.details.label}
-            id="experience-details-title"
+            number={copy.usefulInRealLife.number}
+            label={copy.usefulInRealLife.label}
+            id="experience-useful-title"
             dark
           />
         </div>
         <h3 className="experience-display-title" data-experience-reveal>
-          {copy.details.title}
+          {copy.usefulInRealLife.title}
         </h3>
-        <figure className="experience-figure experience-wide-figure" data-experience-reveal>
-          <ExperienceImage src={images.menu} alt={copy.details.alt} />
-          <figcaption>{copy.details.caption}</figcaption>
-        </figure>
-      </section>
-
-      <section
-        className="experience-section experience-local experience-warm"
-        aria-labelledby="experience-local-title"
-      >
-        <div data-experience-reveal>
-          <ExperienceMarker
-            number={copy.local.number}
-            label={copy.local.label}
-            id="experience-local-title"
-          />
-        </div>
-        <div className="experience-local-layout">
-          <h3 className="experience-display-title" data-experience-reveal>
-            {copy.local.title}
-          </h3>
-          <figure className="experience-figure experience-location-figure" data-experience-reveal>
-            <ExperienceImage src={images.location} alt={copy.local.alt} />
-            <figcaption>{copy.local.caption}</figcaption>
+        <div className="experience-useful-composition">
+          <figure className="experience-figure experience-useful-menu" data-experience-reveal>
+            <ExperienceImage src={images.menu} alt={copy.usefulInRealLife.menuAlt} />
+            <figcaption>{copy.usefulInRealLife.menuCaption}</figcaption>
           </figure>
+          <div className="experience-useful-location">
+            <h4 data-experience-reveal>{copy.usefulInRealLife.localTitle}</h4>
+            <figure className="experience-figure" data-experience-reveal>
+              <ExperienceImage src={images.location} alt={copy.usefulInRealLife.localAlt} />
+              <figcaption>{copy.usefulInRealLife.localCaption}</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section
-        className="experience-section experience-responsive experience-dark"
-        aria-labelledby="experience-responsive-title"
-      >
-        <div data-experience-reveal>
-          <ExperienceMarker
-            number={copy.responsive.number}
-            label={copy.responsive.label}
-            id="experience-responsive-marker"
-            dark
-          />
-        </div>
-        <h3 id="experience-responsive-title" className="experience-responsive-title" data-experience-reveal>
-          <span>{copy.responsive.titleFirst}</span>
-          <span>{copy.responsive.titleSecond}</span>
-        </h3>
-
-        <div className="experience-responsive-stage">
-          <figure className="experience-figure experience-screen experience-screen--homepage" data-experience-reveal>
-            <ExperienceImage src={images.homepage} alt={copy.responsive.homepageAlt} />
-            <figcaption>{copy.responsive.homepageCaption}</figcaption>
-          </figure>
-          <figure className="experience-figure experience-screen experience-screen--menu" data-experience-reveal>
-            <ExperienceImage src={images.menu} alt={copy.responsive.menuAlt} />
-            <figcaption>{copy.responsive.menuCaption}</figcaption>
-          </figure>
-          <figure className="experience-figure experience-screen experience-screen--review" data-experience-reveal>
-            <ExperienceImage src={images.review} alt={copy.responsive.reviewAlt} />
-            <figcaption>{copy.responsive.reviewCaption}</figcaption>
-          </figure>
-          <figure className="experience-figure experience-screen experience-screen--story" data-experience-reveal>
-            <ExperienceImage src={images.story} alt={copy.responsive.storyAlt} />
-            <figcaption>{copy.responsive.storyCaption}</figcaption>
-          </figure>
-          <figure className="experience-figure experience-screen experience-screen--mobile" data-experience-reveal>
-            <ExperienceImage src={images.mobileReview} alt={copy.responsive.mobileAlt} />
-            <figcaption>{copy.responsive.mobileCaption}</figcaption>
-          </figure>
-        </div>
-      </section>
     </section>
   )
 }

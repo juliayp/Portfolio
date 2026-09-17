@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { translations } from '../data/translations'
 import { CarducciCaseStudy } from './CarducciCaseStudy'
 import './Work.css'
@@ -13,6 +13,35 @@ export function Work({ language }) {
   const scrollTimeoutRef = useRef(null)
   const caseStudyId = 'carducci-case-study'
   const caseStudyActionLabel = isCaseStudyOpen ? copy.caseStudy.close : copy.cta
+
+  useEffect(() => {
+    const openFromDrawer = () => {
+      setIsCaseStudyOpen(true)
+
+      if (scrollTimeoutRef.current !== null) {
+        window.clearTimeout(scrollTimeoutRef.current)
+        scrollTimeoutRef.current = null
+      }
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      const scrollToCaseStudy = () => {
+        caseStudyRef.current?.scrollIntoView({
+          behavior: reduceMotion ? 'auto' : 'smooth',
+          block: 'start',
+        })
+        scrollTimeoutRef.current = null
+      }
+
+      if (reduceMotion) {
+        window.requestAnimationFrame(scrollToCaseStudy)
+      } else {
+        scrollTimeoutRef.current = window.setTimeout(scrollToCaseStudy, 140)
+      }
+    }
+
+    window.addEventListener('portfolio:open-carducci', openFromDrawer)
+    return () => window.removeEventListener('portfolio:open-carducci', openFromDrawer)
+  }, [])
 
   const toggleCaseStudy = () => {
     const nextOpenState = !isCaseStudyOpen
@@ -46,7 +75,10 @@ export function Work({ language }) {
     <section className="work" id="work" aria-labelledby="work-title">
       <div className="shell">
         <header className="work-heading">
-          <p className="work-section-number">{copy.sectionNumber}</p>
+          <p className="work-section-number">
+            <span>{copy.sectionNumber} /</span>
+            <span className="work-section-label">{copy.sectionLabel}</span>
+          </p>
           <h2 id="work-title">{copy.heading}</h2>
         </header>
 
@@ -56,55 +88,59 @@ export function Work({ language }) {
           ref={projectRef}
           aria-labelledby="carducci-title"
         >
-          <div className="work-project-heading">
-            <p className="work-project-index">{copy.projectIndex}</p>
-            <h3 id="carducci-title">{copy.title}</h3>
-            <p className="work-project-type">{copy.type}</p>
-          </div>
+          <div className="work-project-layout">
+            <div className="work-project-copy">
+              <div className="work-project-heading">
+                <p className="work-project-index">{copy.projectIndex} /</p>
+                <h3 id="carducci-title">{copy.title}</h3>
+                <p className="work-project-type">{copy.type}</p>
+              </div>
 
-          <button
-            className="work-preview"
-            type="button"
-            aria-controls={caseStudyId}
-            aria-expanded={isCaseStudyOpen}
-            aria-label={`${caseStudyActionLabel}: ${copy.title}`}
-            onClick={toggleCaseStudy}
-          >
-            <img
-              src={projectImage}
-              alt={copy.alt}
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="work-preview-overlay" aria-hidden="true" />
-            <span className="work-preview-action" aria-hidden="true">
-              <span>{caseStudyActionLabel}</span>
-              <span>{isCaseStudyOpen ? '↑' : '↗'}</span>
-            </span>
-          </button>
+              <button
+                className="work-case-link"
+                type="button"
+                aria-controls={caseStudyId}
+                aria-expanded={isCaseStudyOpen}
+                onClick={toggleCaseStudy}
+              >
+                <span>{caseStudyActionLabel}</span>
+                <span aria-hidden="true">{isCaseStudyOpen ? '↑' : '↗'}</span>
+              </button>
+              {isCaseStudyOpen && (
+                <a
+                  className="work-live-link"
+                  href="https://caffe-carducci.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>{copy.liveWebsite}</span>
+                  <span aria-hidden="true">↑</span>
+                </a>
+              )}
+            </div>
 
-          <div className="work-info-grid">
-            <dl className="work-info">
-              <dt>{copy.labels.role}</dt>
-              <dd>{copy.values.role}</dd>
-            </dl>
-            <dl className="work-info">
-              <dt>{copy.labels.stack}</dt>
-              <dd>{copy.values.stack}</dd>
-            </dl>
-            <dl className="work-info">
-              <dt>{copy.labels.year}</dt>
-              <dd>{copy.values.year}</dd>
-            </dl>
             <button
-              className="work-case-link"
+              className="work-preview"
               type="button"
               aria-controls={caseStudyId}
               aria-expanded={isCaseStudyOpen}
+              aria-label={`${caseStudyActionLabel}: ${copy.title}`}
               onClick={toggleCaseStudy}
             >
-              <span>{caseStudyActionLabel}</span>
-              <span aria-hidden="true">{isCaseStudyOpen ? '↑' : '↗'}</span>
+              <img
+                src={projectImage}
+                alt={copy.alt}
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="work-preview-overlay" aria-hidden="true" />
+              <span className="work-preview-action" aria-hidden="true">
+                <span className="work-preview-action-shape" />
+                <span className="work-preview-action-content">
+                  <span>{isCaseStudyOpen ? '↑' : '↗'}</span>
+                  <span>{caseStudyActionLabel}</span>
+                </span>
+              </span>
             </button>
           </div>
 

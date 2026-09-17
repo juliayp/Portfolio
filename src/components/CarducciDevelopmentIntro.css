@@ -1,9 +1,9 @@
 .carducci-development-intro {
   display: grid;
-  min-height: min(100svh, 64rem);
-  grid-template-rows: auto 1fr auto;
+  min-height: 0;
+  grid-template-rows: auto auto auto;
   overflow: clip;
-  padding: clamp(4.75rem, 7vw, 7rem) var(--page-gutter) clamp(4.5rem, 6vw, 6rem);
+  padding: clamp(1.25rem, 1.6vw, 1.5rem) var(--page-gutter);
   border-top: 1px solid rgba(244, 243, 238, 0.18);
   background: #111111;
   color: #f4f3ee;
@@ -32,9 +32,9 @@
 
 .development-title {
   align-self: center;
-  margin: clamp(3rem, 6vh, 5rem) 0;
+  margin: clamp(1rem, 1.8vh, 1.5rem) 0;
   font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
-  font-size: clamp(4.75rem, 9.35vw, 9.75rem);
+  font-size: clamp(4.25rem, 5.7vw, 6.75rem);
   font-weight: 600;
   letter-spacing: -0.09em;
   line-height: 0.78;
@@ -69,9 +69,9 @@
 .development-supporting {
   display: grid;
   grid-template-columns: minmax(0, 7fr) minmax(17rem, 4fr);
-  gap: clamp(3rem, 8vw, 9rem);
+  gap: clamp(2rem, 5vw, 5rem);
   align-items: end;
-  padding-top: clamp(1.5rem, 3vw, 3rem);
+  padding-top: clamp(0.75rem, 1.5vw, 1.5rem);
   border-top: 1px solid rgba(244, 243, 238, 0.22);
 }
 
@@ -144,18 +144,18 @@
 @media (max-width: 900px) {
   .carducci-development-intro {
     min-height: auto;
-    padding-block: 5.5rem;
+    padding-block: clamp(3rem, 7vw, 4rem);
   }
 
   .development-title {
-    margin-top: clamp(5rem, 11vw, 7.5rem);
-    margin-bottom: clamp(3rem, 7vw, 5.5rem);
-    font-size: clamp(4.2rem, 11vw, 5.75rem);
+    margin-top: clamp(2.5rem, 5vw, 3.75rem);
+    margin-bottom: clamp(1.75rem, 4vw, 3rem);
+    font-size: clamp(3.75rem, 10vw, 5.25rem);
   }
 
   .development-supporting {
     grid-template-columns: 1fr;
-    gap: 3.25rem;
+    gap: 2rem;
   }
 
   .development-copy {
@@ -166,7 +166,7 @@
 
 @media (max-width: 600px) {
   .carducci-development-intro {
-    padding-block: 4.75rem;
+    padding-block: 3rem;
   }
 
   .development-marker {
@@ -175,7 +175,7 @@
   }
 
   .development-title {
-    margin-block: 4.5rem;
+    margin-block: 2.25rem;
     font-size: clamp(3.05rem, 12.8vw, 4.1rem);
     line-height: 0.81;
   }
@@ -194,8 +194,8 @@
   }
 
   .development-supporting {
-    gap: 3rem;
-    padding-top: 1.5rem;
+    gap: 2rem;
+    padding-top: 1rem;
   }
 
   .development-meta {

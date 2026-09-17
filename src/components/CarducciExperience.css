@@ -23,7 +23,7 @@
 }
 
 .experience-section {
-  padding-block: clamp(5.5rem, 10vw, 10rem);
+  padding-block: clamp(4rem, 6vw, 6rem);
   border-top: 1px solid rgba(17, 17, 17, 0.16);
 }
 
@@ -119,88 +119,97 @@
 
 .experience-first-figure {
   width: min(92%, 100rem);
-  margin: clamp(4rem, 8vw, 8rem) auto 0;
+  margin: clamp(3rem, 5vw, 5rem) auto 0;
 }
 
 .experience-display-title {
   max-width: 10ch;
-  margin: clamp(4rem, 8vw, 8rem) 0 0;
+  margin: clamp(3rem, 5vw, 5rem) 0 0;
   font-size: clamp(3.4rem, 7.8vw, 8.5rem);
   line-height: 0.86;
 }
 
-.experience-story-composition {
+.experience-atmosphere-composition {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-items: start;
-  margin-top: clamp(4rem, 8vw, 8rem);
+  margin-top: clamp(3rem, 5vw, 5rem);
 }
 
-.experience-story-main {
+.experience-atmosphere-story {
   grid-column: 1 / 8;
+  grid-row: 1 / span 2;
   width: 100%;
 }
 
-.experience-story-aside {
+.experience-atmosphere-vivi {
   grid-column: 9 / 13;
   width: 100%;
-  margin-top: clamp(8rem, 17vw, 17rem);
+  margin-top: clamp(1rem, 3vw, 3rem);
 }
 
-.experience-day-title {
-  margin-left: 17%;
+.experience-atmosphere-aperitivo {
+  grid-column: 7 / 13;
+  grid-row: 2;
+  width: 100%;
+  margin-top: clamp(-5rem, -5vw, -2rem);
 }
 
-.experience-wide-figure {
-  width: min(94%, 105rem);
-  margin: clamp(4rem, 8vw, 8rem) auto 0;
+.experience-useful {
+  padding-block: clamp(3.5rem, 5vw, 5rem);
 }
 
-.experience-details .experience-display-title {
+.experience-useful > .experience-display-title {
+  max-width: 8ch;
   margin-left: auto;
   text-align: right;
 }
 
-.experience-details .experience-wide-figure {
-  margin-left: 0;
-}
-
-.experience-local-layout {
+.experience-useful-composition {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(17rem, 0.9fr);
-  gap: clamp(3rem, 8vw, 9rem);
+  grid-template-columns: minmax(0, 1.65fr) minmax(15rem, 0.65fr);
+  gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
-  margin-top: clamp(4rem, 8vw, 8rem);
+  margin-top: clamp(2.5rem, 4vw, 4rem);
 }
 
-.experience-local .experience-display-title {
-  margin: 0;
+.experience-useful-menu {
+  width: 100%;
 }
 
-.experience-location-figure {
-  width: min(100%, 38rem);
-  justify-self: end;
+.experience-useful-location {
+  min-width: 0;
 }
 
-/* Desktop-only rhythm refinements for the two quieter statements. */
+.experience-useful-location h4 {
+  max-width: 12ch;
+  margin: 0 0 1.75rem;
+  color: #f4f3ee;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(1.7rem, 2.45vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.experience-useful-location .experience-figure {
+  width: min(100%, 23rem);
+}
+
 @media (min-width: 901px) {
-  .experience-day,
-  .experience-local {
-    padding-block: clamp(5rem, 8.5vw, 9rem);
+  .experience-atmosphere-story {
+    max-width: 38rem;
   }
 
-  .experience-day-title {
-    margin-top: clamp(3.25rem, 6.5vw, 6.5rem);
-    font-size: clamp(3.25rem, 7.15vw, 7.8rem);
+  .experience-atmosphere-vivi {
+    max-width: 32rem;
+    justify-self: end;
   }
 
-  .experience-day .experience-wide-figure,
-  .experience-local-layout {
-    margin-top: clamp(3.25rem, 6.5vw, 6.5rem);
-  }
-
-  .experience-location-figure {
-    width: min(110%, 43rem);
+  .experience-atmosphere-aperitivo {
+    max-width: 47rem;
+    justify-self: end;
   }
 }
 
@@ -296,18 +305,36 @@
     font-size: clamp(3.6rem, 10.5vw, 6.5rem);
   }
 
-  .experience-story-main {
-    grid-column: 1 / 9;
+  .experience-atmosphere-composition {
+    grid-template-rows: auto auto;
   }
 
-  .experience-story-aside {
-    grid-column: 8 / 13;
-    margin-top: clamp(7rem, 18vw, 11rem);
+  .experience-atmosphere-story {
+    grid-column: 1 / 6;
+    grid-row: 1 / span 2;
   }
 
-  .experience-local-layout {
+  .experience-atmosphere-vivi {
+    grid-column: 6 / 13;
+    grid-row: 1;
+    width: min(75%, 20rem);
+    justify-self: end;
+    margin-top: 0;
+  }
+
+  .experience-atmosphere-aperitivo {
+    grid-column: 6 / 13;
+    grid-row: 2;
+    margin-top: 2rem;
+  }
+
+  .experience-useful-composition {
     grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.8fr);
     gap: 2rem;
+  }
+
+  .experience-useful-location h4 {
+    font-size: clamp(1.6rem, 3.6vw, 2.4rem);
   }
 
   .experience-responsive-title {
@@ -356,8 +383,7 @@
     font-size: 0.92rem;
   }
 
-  .experience-first-figure,
-  .experience-wide-figure {
+  .experience-first-figure {
     width: 100%;
     margin-top: 3.5rem;
   }
@@ -368,42 +394,55 @@
     font-size: clamp(3.05rem, 13vw, 4rem);
   }
 
-  .experience-story-composition {
+  .experience-atmosphere-composition {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
     margin-top: 3.5rem;
   }
 
-  .experience-story-main {
-    width: 82%;
+  .experience-atmosphere-story {
+    width: 78%;
   }
 
-  .experience-story-aside {
-    width: 68%;
+  .experience-atmosphere-vivi {
+    width: 58%;
     margin-top: 0;
     align-self: flex-end;
   }
 
-  .experience-day-title {
-    margin-left: 0;
+  .experience-atmosphere-aperitivo {
+    width: 100%;
+    margin-top: 0;
   }
 
-  .experience-details .experience-display-title {
-    text-align: left;
+  .experience-useful {
+    padding-block: 3.5rem;
   }
 
-  .experience-local-layout {
+  .experience-useful > .experience-display-title {
+    margin-left: auto;
+    text-align: right;
+    margin-top: 1.25rem;
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+
+  .experience-useful-composition {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 3rem;
     align-items: stretch;
     margin-top: 3.75rem;
   }
 
-  .experience-location-figure {
+  .experience-useful-location {
     width: 78%;
     align-self: flex-end;
+  }
+
+  .experience-useful-location h4 {
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.75rem, 7vw, 2.4rem);
   }
 
   .experience-responsive-title {

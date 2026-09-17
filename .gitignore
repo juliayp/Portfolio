@@ -19,6 +19,7 @@ coverage/
 .vscode/
 .idea/
 .vercel/
+.playwright-mcp/
 qa-artifacts/
 HANDOFF.md
 
