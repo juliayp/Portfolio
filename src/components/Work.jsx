@@ -3,7 +3,8 @@ import { translations } from '../data/translations'
 import { CarducciCaseStudy } from './CarducciCaseStudy'
 import './Work.css'
 
-const projectImage = '/images/carducci-preview.jpeg'
+const carducciImage = '/images/carducci-preview.jpeg'
+const grifoneImage = '/images/work/pratiche-auto-grifone.png'
 
 export function Work({ language }) {
   const copy = translations[language].work
@@ -128,19 +129,12 @@ export function Work({ language }) {
               onClick={toggleCaseStudy}
             >
               <img
-                src={projectImage}
+                src={carducciImage}
                 alt={copy.alt}
                 loading="lazy"
                 decoding="async"
               />
               <span className="work-preview-overlay" aria-hidden="true" />
-              <span className="work-preview-action" aria-hidden="true">
-                <span className="work-preview-action-shape" />
-                <span className="work-preview-action-content">
-                  <span>{isCaseStudyOpen ? '↑' : '↗'}</span>
-                  <span>{caseStudyActionLabel}</span>
-                </span>
-              </span>
             </button>
           </div>
 
@@ -152,6 +146,40 @@ export function Work({ language }) {
           >
             <div className="case-study-reveal-inner">
               <CarducciCaseStudy copy={copy.caseStudy} onClose={toggleCaseStudy} />
+            </div>
+          </div>
+        </article>
+
+        <article
+          className="work-project work-project--reverse"
+          id="pratiche-auto-grifone"
+          aria-labelledby="grifone-title"
+        >
+          <div className="work-project-layout">
+            <div className="work-preview work-preview--static work-preview--grifone">
+              <img
+                src={grifoneImage}
+                alt={copy.grifone.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div className="work-project-copy">
+              <div className="work-project-heading">
+                <p className="work-project-index">{copy.grifone.projectIndex} /</p>
+                <h3 id="grifone-title" className="work-project-title--grifone">
+                  {copy.grifone.titleLines.map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
+                </h3>
+                <p className="work-project-type">{copy.grifone.type}</p>
+              </div>
+
+              <div className="work-case-link work-case-link--inactive">
+                <span>{copy.grifone.cta}</span>
+                <span aria-hidden="true">↗</span>
+              </div>
             </div>
           </div>
         </article>

@@ -518,6 +518,13 @@ export const translations = {
       cta: 'VIEW CASE',
       liveWebsite: 'VIEW LIVE WEBSITE',
       alt: 'Caffè Carducci coffee cup inside the café in Grosseto',
+      grifone: {
+        projectIndex: '02',
+        titleLines: ['PRATICHE', 'AUTO', 'GRIFONE'],
+        type: 'DESIGN + DEVELOPMENT · GROSSETO, ITALY · 2026',
+        cta: 'VIEW CASE',
+        alt: 'Green classic Porsche in Piazza Dante, Grosseto, for Pratiche Auto Grifone',
+      },
       drawer: {
         marker: 'WORK / INDEX',
         heading: 'SELECTED WORK',
@@ -652,8 +659,8 @@ export const translations = {
     },
     work: {
       ...sharedWork,
-      sectionLabel: 'PROGETTO IN EVIDENZA',
-      heading: 'PROGETTO SELEZIONATO.',
+      sectionLabel: 'PROGETTI IN EVIDENZA',
+      heading: 'PROGETTI SELEZIONATI.',
       type: 'DESIGN E SVILUPPO · GROSSETO, ITALIA · 2026',
       labels: {
         role: 'RUOLO',
@@ -663,6 +670,13 @@ export const translations = {
       cta: 'SCOPRI IL PROGETTO',
       liveWebsite: 'VISITA IL SITO',
       alt: 'Tazzina di Caffè Carducci all’interno del locale a Grosseto',
+      grifone: {
+        projectIndex: '02',
+        titleLines: ['PRATICHE', 'AUTO', 'GRIFONE'],
+        type: 'DESIGN E SVILUPPO · GROSSETO, ITALIA · 2026',
+        cta: 'SCOPRI IL PROGETTO',
+        alt: 'Porsche classica verde in Piazza Dante a Grosseto per Pratiche Auto Grifone',
+      },
       drawer: {
         marker: 'PROGETTI / INDICE',
         heading: 'PROGETTI SELEZIONATI',
