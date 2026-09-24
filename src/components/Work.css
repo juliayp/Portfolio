@@ -271,6 +271,18 @@
   transition-delay: 0s;
 }
 
+@media (max-width: 1024px) {
+  .case-study-reveal.is-open {
+    width: calc(100% + (var(--page-gutter) * 2));
+    margin-inline: calc(var(--page-gutter) * -1);
+  }
+
+  .case-study-reveal.is-open > .case-study-reveal-inner > * {
+    width: 100%;
+    margin-inline: 0;
+  }
+}
+
 @media (max-width: 900px) {
   .work-heading {
     grid-template-columns: minmax(8rem, 0.38fr) minmax(0, 1fr);
