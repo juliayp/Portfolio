@@ -465,7 +465,14 @@ export function Hero({ language, onLanguageChange, children }) {
                           <span key={line}>
                             {line}
                             {index === copy.heroContactText.length - 1 ? (
-                              <span className="hero-splat-cta-arrow">↗</span>
+                              <svg
+                                className="hero-splat-cta-arrow"
+                                viewBox="0 0 10 10"
+                                aria-hidden="true"
+                                focusable="false"
+                              >
+                                <path d="M1.25 8.75 8.75 1.25M3.25 1.25h5.5v5.5" />
+                              </svg>
                             ) : null}
                           </span>
                         ))}

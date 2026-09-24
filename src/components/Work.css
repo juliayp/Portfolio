@@ -271,6 +271,12 @@
   transition-delay: 0s;
 }
 
+@media (max-width: 1024px) {
+  #carducci-case-study.is-open > .case-study-reveal-inner {
+    overflow: visible;
+  }
+}
+
 @media (max-width: 900px) {
   .work-heading {
     grid-template-columns: minmax(8rem, 0.38fr) minmax(0, 1fr);
