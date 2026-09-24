@@ -272,7 +272,7 @@
 }
 
 @media (max-width: 1024px) {
-  .case-study-reveal.is-open > .case-study-reveal-inner {
+  #carducci-case-study.is-open > .case-study-reveal-inner {
     overflow: visible;
   }
 }
