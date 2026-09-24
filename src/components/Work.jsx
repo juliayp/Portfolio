@@ -255,6 +255,16 @@ export function Work({ language }) {
                   <GrifoneWorkflowScene copy={copy.grifone.caseStudy.workflow} />
                   <GrifoneBuildScene copy={copy.grifone.caseStudy.build} />
                   <GrifoneUnderHoodScene copy={copy.grifone.caseStudy.underHood} />
+                  <div className="case-study-close-wrap">
+                    <button
+                      className="case-study-close"
+                      type="button"
+                      onClick={toggleGrifoneCaseStudy}
+                    >
+                      <span>{copy.grifone.caseStudy.close}</span>
+                      <span aria-hidden="true">↑</span>
+                    </button>
+                  </div>
                 </>
               )}
             </div>

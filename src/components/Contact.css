@@ -147,6 +147,20 @@ html[lang='it'] .contact-title {
   color: #f4f3ee;
 }
 
+.contact-link-arrow {
+  display: inline-block;
+  width: 0.78em;
+  height: 0.78em;
+  margin-left: 0.28em;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.45;
+  vertical-align: 0.02em;
+}
+
 .contact-links a::after {
   position: absolute;
   right: 0;

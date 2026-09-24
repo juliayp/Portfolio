@@ -55,10 +55,26 @@ export function Contact({ language }) {
 
           <nav className="contact-links" aria-label={copy.linksLabel}>
             <a href={copy.links.linkedin} target="_blank" rel="noopener noreferrer">
-              LINKEDIN <span aria-hidden="true">↗</span>
+              LINKEDIN
+              <svg
+                className="contact-link-arrow"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M1.25 8.75 8.75 1.25M3.25 1.25h5.5v5.5" />
+              </svg>
             </a>
             <a href={copy.links.github} target="_blank" rel="noopener noreferrer">
-              GITHUB <span aria-hidden="true">↗</span>
+              GITHUB
+              <svg
+                className="contact-link-arrow"
+                viewBox="0 0 10 10"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M1.25 8.75 8.75 1.25M3.25 1.25h5.5v5.5" />
+              </svg>
             </a>
             <a href="#top">{copy.links.backToTop} <span aria-hidden="true">↑</span></a>
           </nav>
