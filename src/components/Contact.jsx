@@ -62,7 +62,7 @@ export function Contact({ language }) {
                 aria-hidden="true"
                 focusable="false"
               >
-                <path d="M1.25 8.75 8.75 1.25M3.25 1.25h5.5v5.5" />
+                <path d="M5 9V1.25M1.75 4.5 5 1.25 8.25 4.5" />
               </svg>
             </a>
             <a href={copy.links.github} target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ export function Contact({ language }) {
                 aria-hidden="true"
                 focusable="false"
               >
-                <path d="M1.25 8.75 8.75 1.25M3.25 1.25h5.5v5.5" />
+                <path d="M5 9V1.25M1.75 4.5 5 1.25 8.25 4.5" />
               </svg>
             </a>
             <a href="#top">{copy.links.backToTop} <span aria-hidden="true">↑</span></a>
