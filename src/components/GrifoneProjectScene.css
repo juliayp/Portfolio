@@ -1,0 +1,282 @@
+.grifone-project-scene {
+  --grifone-scene-safe-inset: clamp(0.4rem, 0.75vw, 0.7rem);
+  width: calc(100% + (var(--page-gutter) * 2));
+  min-height: 900px;
+  margin-inline: calc(var(--page-gutter) * -1);
+  padding: 2rem calc(var(--page-gutter) + var(--grifone-scene-safe-inset)) 2.75rem;
+  overflow: clip;
+  background: #f4f3ee;
+  color: #111111;
+}
+
+.grifone-project-scene__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 0 1.05rem;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.24);
+}
+
+.grifone-project-scene__header p,
+.grifone-project-scene__media figcaption,
+.grifone-project-scene__meta {
+  margin: 0;
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.grifone-project-scene__header p:first-child {
+  color: #6c8700;
+}
+
+.grifone-project-scene__hero {
+  display: grid;
+  grid-template-columns: minmax(20rem, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: max(
+    1rem,
+    calc(clamp(2rem, 4vw, 4.5rem) - (var(--grifone-scene-safe-inset) * 2))
+  );
+  margin-top: clamp(2.25rem, 3.4vw, 3.1rem);
+}
+
+.grifone-project-scene__title {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(5.1rem, 7.45vw, 6.7rem);
+  font-weight: 600;
+  letter-spacing: -0.08em;
+  line-height: 0.79;
+}
+
+.grifone-project-scene__title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.grifone-project-scene__title-outline {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.35px #111111;
+}
+
+.grifone-project-scene__media {
+  min-width: 0;
+  margin: 0;
+}
+
+.grifone-project-scene__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 31rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.grifone-project-scene__media figcaption {
+  width: min(100%, 47.55rem);
+  margin-top: 0.8rem;
+  color: #66665f;
+  text-align: right;
+}
+
+.grifone-project-scene__lower {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(24rem, 0.72fr);
+  align-items: start;
+  gap: max(
+    2rem,
+    calc(clamp(3rem, 8vw, 9rem) - (var(--grifone-scene-safe-inset) * 2))
+  );
+  margin-top: clamp(2.7rem, 4vw, 3.8rem);
+  padding-top: clamp(1.55rem, 2.1vw, 2rem);
+  border-top: 1px solid rgba(17, 17, 17, 0.24);
+}
+
+.grifone-project-scene__statements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.grifone-project-scene__statements p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(1.65rem, 2.45vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.94;
+}
+
+.grifone-project-scene__lime {
+  color: #9bc700;
+}
+
+.grifone-project-scene__summary {
+  max-width: 31rem;
+  justify-self: end;
+}
+
+.grifone-project-scene__summary > p {
+  margin: 0;
+  color: #393934;
+  font-size: clamp(0.88rem, 1.05vw, 1rem);
+  line-height: 1.58;
+}
+
+.grifone-project-scene__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+  margin: 1.65rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.24);
+  color: #111111;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+}
+
+.grifone-project-scene__meta span {
+  display: block;
+}
+
+.grifone-project-scene__reveal {
+  animation: grifone-project-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.grifone-project-scene__reveal--2 { animation-delay: 90ms; }
+.grifone-project-scene__reveal--3 { animation-delay: 160ms; }
+.grifone-project-scene__reveal--4 { animation-delay: 230ms; }
+.grifone-project-scene__reveal--5 { animation-delay: 300ms; }
+
+@keyframes grifone-project-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .grifone-project-scene {
+    min-height: 0;
+    padding: 1.5rem calc(var(--page-gutter) + var(--grifone-scene-safe-inset)) 2.75rem;
+  }
+
+  .grifone-project-scene__hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .grifone-project-scene__title {
+    font-size: clamp(4.2rem, 11vw, 5.6rem);
+    line-height: 0.82;
+  }
+
+  .grifone-project-scene__media {
+    width: min(100%, 42rem);
+    justify-self: start;
+  }
+
+  .grifone-project-scene__media img {
+    max-height: none;
+  }
+
+  .grifone-project-scene__media figcaption {
+    width: 100%;
+  }
+
+  .grifone-project-scene__lower {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.25rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .grifone-project-scene__statements p {
+    font-size: clamp(1.7rem, 4vw, 2.1rem);
+  }
+
+  .grifone-project-scene__summary {
+    max-width: 42rem;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .grifone-project-scene {
+    padding-top: 1.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .grifone-project-scene__header {
+    gap: 1rem;
+  }
+
+  .grifone-project-scene__header p {
+    font-size: 0.55rem;
+  }
+
+  .grifone-project-scene__header p:last-child {
+    text-align: right;
+  }
+
+  .grifone-project-scene__hero {
+    gap: 1.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .grifone-project-scene__title {
+    font-size: clamp(3.15rem, 16vw, 4rem);
+    letter-spacing: -0.07em;
+  }
+
+  .grifone-project-scene__media figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.52rem;
+  }
+
+  .grifone-project-scene__lower {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .grifone-project-scene__statements {
+    gap: 1.5rem;
+  }
+
+  .grifone-project-scene__statements p {
+    font-size: 1.55rem;
+    line-height: 1;
+  }
+
+  .grifone-project-scene__summary > p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .grifone-project-scene__meta {
+    margin-top: 1.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grifone-project-scene__reveal {
+    animation: none;
+  }
+}

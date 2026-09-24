@@ -1175,6 +1175,7 @@ h1 {
     font-family: var(--font-display);
     font-size: 1.25rem;
     letter-spacing: -0.02em;
+    text-align: left;
   }
 
   .header-nav a::before,

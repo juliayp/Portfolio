@@ -105,10 +105,18 @@
 }
 
 .about-artwork-svg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   display: block;
   width: 100%;
   height: 100%;
   overflow: visible;
+  pointer-events: none;
+}
+
+.about-artwork-svg--front {
+  z-index: 2;
 }
 
 .about-artwork-aura {
@@ -117,18 +125,67 @@
 
 .about-orbit {
   fill: none;
-  stroke: rgba(199, 255, 0, 0.2);
-  stroke-width: 0.28;
+  stroke: #efffb3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.82;
   vector-effect: non-scaling-stroke;
-  transform: rotate(-19deg);
-  transform-box: fill-box;
-  transform-origin: center;
 }
 
-.about-orbit--secondary {
-  stroke: rgba(244, 243, 238, 0.15);
-  stroke-dasharray: 1.2 2.8;
-  transform: rotate(31deg);
+.about-orbits {
+  mix-blend-mode: screen;
+  transition: opacity 320ms ease, filter 320ms ease;
+}
+
+.about-orbits--back {
+  opacity: 0.92;
+  filter:
+    drop-shadow(0 0 0.05rem rgba(248, 255, 218, 1))
+    drop-shadow(0 0 0.16rem rgba(199, 255, 0, 1))
+    drop-shadow(0 0 0.42rem rgba(199, 255, 0, 0.72))
+    drop-shadow(0 0 0.78rem rgba(199, 255, 0, 0.28));
+}
+
+.about-orbits--front {
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 0.05rem rgba(255, 255, 255, 1))
+    drop-shadow(0 0 0.18rem rgba(199, 255, 0, 1))
+    drop-shadow(0 0 0.48rem rgba(199, 255, 0, 0.9))
+    drop-shadow(0 0 0.9rem rgba(199, 255, 0, 0.36));
+}
+
+.about-orbits--front .about-orbit {
+  stroke: #fbffe8;
+  stroke-width: 0.94;
+}
+
+.about-orbit--soft {
+  opacity: 0.72;
+}
+
+.about-orbit--lower {
+  opacity: 0.28;
+}
+
+.about-artwork.is-awake .about-orbits--back,
+.about-artwork.is-connected .about-orbits--back {
+  opacity: 0.98;
+  filter:
+    drop-shadow(0 0 0.05rem rgba(248, 255, 218, 1))
+    drop-shadow(0 0 0.18rem rgba(199, 255, 0, 1))
+    drop-shadow(0 0 0.48rem rgba(199, 255, 0, 0.82))
+    drop-shadow(0 0 0.86rem rgba(199, 255, 0, 0.34));
+}
+
+.about-artwork.is-awake .about-orbits--front,
+.about-artwork.is-connected .about-orbits--front {
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 0.06rem rgba(255, 255, 255, 1))
+    drop-shadow(0 0 0.2rem rgba(199, 255, 0, 1))
+    drop-shadow(0 0 0.54rem rgba(199, 255, 0, 0.98))
+    drop-shadow(0 0 1rem rgba(199, 255, 0, 0.42));
 }
 
 .about-label-link line {
@@ -169,7 +226,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 1;
   filter: contrast(1.04) saturate(0.96);
   transform: scale(0.9);
   object-fit: cover;
@@ -187,7 +244,7 @@
 
 .about-artwork.is-awake .about-sculpture-image,
 .about-artwork.is-connected .about-sculpture-image {
-  opacity: 1;
+  opacity: 0.8;
   filter: contrast(1.06) saturate(1.02);
 }
 
@@ -231,6 +288,10 @@
   transition: transform 180ms ease, color 180ms ease, border-color 240ms ease;
   touch-action: none;
   user-select: none;
+}
+
+.about-concept--business {
+  margin-top: 30px;
 }
 
 .about-concept::before {
@@ -321,8 +382,7 @@
   cursor: grabbing;
 }
 
-.about-concept:focus-visible,
-.about-reset:focus-visible {
+.about-concept:focus-visible {
   outline: 2px solid #f4f3ee;
   outline-offset: 4px;
 }
@@ -353,8 +413,7 @@
   margin-top: 0.72rem;
 }
 
-.about-playground-hint,
-.about-reset {
+.about-playground-hint {
   color: rgba(244, 243, 238, 0.5);
   font-family: var(--font-ui, 'Inter', Arial, sans-serif);
   font-size: 0.55rem;
@@ -369,13 +428,8 @@
   font-size: 1.1rem;
 }
 
-.about-reset {
-  color: rgba(244, 243, 238, 0.5);
-  cursor: pointer;
-}
-
-.about-reset:hover {
-  color: #f4f3ee;
+.about-playground-hint-touch {
+  display: none;
 }
 
 .about-bottom {
@@ -499,6 +553,14 @@
     font-size: 0.825rem;
   }
 
+  .about-playground-hint-desktop {
+    display: none;
+  }
+
+  .about-playground-hint-touch {
+    display: inline;
+  }
+
   .about-sculpture-image {
     transform: scale(0.74);
   }
@@ -557,8 +619,16 @@
   }
 
   .about-sculpture-image {
-    opacity: 0.9;
+    opacity: 1;
     transform: scale(0.68);
+  }
+
+  .about-orbits--back {
+    opacity: 0.62;
+  }
+
+  .about-orbits--front {
+    opacity: 0.84;
   }
 
   .about-concept {
@@ -593,8 +663,7 @@
     gap: 0.5rem;
   }
 
-  .about-playground-hint,
-  .about-reset {
+  .about-playground-hint {
     font-size: 0.5rem;
   }
 
@@ -709,7 +778,8 @@
   .about-concept::before,
   .about-label-link line,
   .about-label-link circle,
-  .about-relation-line {
+  .about-relation-line,
+  .about-orbits {
     animation: none;
     transition: none;
   }

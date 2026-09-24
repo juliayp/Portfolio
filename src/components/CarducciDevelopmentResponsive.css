@@ -116,12 +116,16 @@
 .responsive-engineering-screen figcaption {
   padding-inline: var(--case-study-safe-inset);
   margin-bottom: 0.7rem;
-  color: #b8b8b2;
+  color: #ffffff;
   font-size: 0.54rem;
   font-weight: 600;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.16em;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.responsive-engineering-screen--mobile figcaption {
+  text-align: right;
 }
 
 .responsive-engineering-screen img {

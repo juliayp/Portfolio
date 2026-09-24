@@ -1,0 +1,315 @@
+.grifone-structure {
+  --grifone-structure-safe-inset: clamp(0.4rem, 0.75vw, 0.7rem);
+  display: flex;
+  width: calc(100% + (var(--page-gutter) * 2));
+  min-height: 900px;
+  margin-inline: calc(var(--page-gutter) * -1);
+  padding: 2rem calc(var(--page-gutter) + var(--grifone-structure-safe-inset)) 2.75rem;
+  flex-direction: column;
+  overflow: clip;
+  background: #f4f3ee;
+  color: #111111;
+}
+
+.grifone-structure__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.05rem;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.24);
+}
+
+.grifone-structure__header p {
+  margin: 0;
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.grifone-structure__header p:last-child {
+  color: #66665f;
+}
+
+.grifone-structure__title {
+  display: flex;
+  flex-direction: column;
+  margin: clamp(2.5rem, 4vw, 3.75rem) 0 0;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(5rem, 7.5vw, 6.9rem);
+  font-weight: 600;
+  letter-spacing: -0.075em;
+  line-height: 0.82;
+}
+
+.grifone-structure__title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.grifone-structure__title-outline {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.35px #111111;
+}
+
+.grifone-structure__journey {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(2.75rem, 4.8vw, 5rem);
+  margin: 0;
+  padding: clamp(2.75rem, 4.5vw, 4.5rem) 0;
+  list-style: none;
+}
+
+.grifone-structure__journey li {
+  position: relative;
+  min-width: 0;
+  min-height: 10.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.34);
+}
+
+.grifone-structure__journey li:not(:last-child)::after {
+  position: absolute;
+  top: -0.92rem;
+  right: clamp(-3.2rem, -2.7vw, -1.7rem);
+  color: rgba(17, 17, 17, 0.52);
+  content: '→';
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.grifone-structure__step-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.095em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.grifone-structure__step-heading span:first-child {
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(3.6rem, 5vw, 4.9rem);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  line-height: 0.8;
+}
+
+.grifone-structure__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+  margin: 1.45rem 0 0;
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 0.57rem;
+  font-weight: 600;
+  letter-spacing: 0.085em;
+  line-height: 1.42;
+  text-transform: uppercase;
+}
+
+.grifone-structure__detail span:first-child {
+  color: #66665f;
+}
+
+.grifone-structure__detail span:last-child {
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.grifone-structure__bottom {
+  padding-top: 1.45rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.24);
+}
+
+.grifone-structure__bottom p {
+  display: flex;
+  max-width: 58rem;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin: 0 0 0 auto;
+  color: #393934;
+  font-size: clamp(0.92rem, 1.25vw, 1.12rem);
+  line-height: 1.5;
+}
+
+.grifone-structure__bottom strong {
+  color: #111111;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(1.8rem, 2.7vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.grifone-structure__reveal {
+  animation: grifone-structure-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.grifone-structure__reveal--2 { animation-delay: 90ms; }
+.grifone-structure__reveal--3 { animation-delay: 170ms; }
+.grifone-structure__reveal--4 { animation-delay: 250ms; }
+
+@keyframes grifone-structure-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .grifone-structure {
+    min-height: 0;
+    padding: 1.5rem calc(var(--page-gutter) + var(--grifone-structure-safe-inset)) 2.75rem;
+  }
+
+  .grifone-structure__title {
+    margin-top: 2.75rem;
+    font-size: clamp(4.2rem, 10vw, 5.4rem);
+    line-height: 0.84;
+  }
+
+  .grifone-structure__journey {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding-block: 3rem;
+  }
+
+  .grifone-structure__journey li {
+    min-height: 0;
+    padding: 1.25rem 0 2.7rem;
+  }
+
+  .grifone-structure__journey li:last-child {
+    padding-bottom: 1.25rem;
+  }
+
+  .grifone-structure__journey li:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    bottom: 0.55rem;
+    left: 2rem;
+    content: '↓';
+    font-size: 1.15rem;
+  }
+
+  .grifone-structure__step-heading {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+
+  .grifone-structure__step-heading span:first-child {
+    font-size: 4rem;
+  }
+
+  .grifone-structure__detail {
+    margin-top: 0.95rem;
+    margin-left: 6.5rem;
+  }
+
+  .grifone-structure__bottom p {
+    max-width: 42rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .grifone-structure {
+    padding-top: 1.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .grifone-structure__header {
+    gap: 1rem;
+  }
+
+  .grifone-structure__header p {
+    font-size: 0.55rem;
+  }
+
+  .grifone-structure__header p:last-child {
+    max-width: 10.5rem;
+    text-align: right;
+  }
+
+  .grifone-structure__title {
+    margin-top: 2.25rem;
+    font-size: clamp(2.55rem, 11.2vw, 2.85rem);
+    letter-spacing: -0.06em;
+    line-height: 0.88;
+  }
+
+  .grifone-structure__journey {
+    padding-block: 2.5rem;
+  }
+
+  .grifone-structure__journey li {
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .grifone-structure__journey li:last-child {
+    padding-bottom: 1rem;
+  }
+
+  .grifone-structure__journey li:not(:last-child)::after {
+    bottom: 0.5rem;
+    left: 1.25rem;
+  }
+
+  .grifone-structure__step-heading {
+    grid-template-columns: 3.7rem minmax(0, 1fr);
+    gap: 0.85rem;
+    font-size: 0.66rem;
+    line-height: 1.4;
+  }
+
+  .grifone-structure__step-heading span:first-child {
+    font-size: 3rem;
+  }
+
+  .grifone-structure__detail {
+    margin-top: 1rem;
+    margin-left: 0;
+    font-size: 0.55rem;
+  }
+
+  .grifone-structure__bottom {
+    padding-top: 1.25rem;
+  }
+
+  .grifone-structure__bottom p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .grifone-structure__bottom strong {
+    font-size: 1.75rem;
+    line-height: 1.05;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grifone-structure__reveal {
+    animation: none;
+  }
+}

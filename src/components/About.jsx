@@ -16,7 +16,7 @@ const INITIAL_POSITIONS = Object.freeze({
   design: Object.freeze({ x: 17, y: 22 }),
   code: Object.freeze({ x: 17, y: 16 }),
   people: Object.freeze({ x: 28, y: 69 }),
-  business: Object.freeze({ x: 92, y: 67 }),
+  business: Object.freeze({ x: 92, y: 76 }),
 })
 
 const CONCEPT_ANCHORS = Object.freeze({
@@ -568,8 +568,20 @@ export function About({ language }) {
                 </defs>
 
                 <ellipse className="about-artwork-aura" cx="53" cy="51" rx="43" ry="45" fill="url(#about-artwork-aura)" />
-                <ellipse className="about-orbit" cx="53" cy="51" rx="38" ry="21" />
-                <ellipse className="about-orbit about-orbit--secondary" cx="53" cy="51" rx="28" ry="40" />
+                <g className="about-orbits about-orbits--back">
+                  <path
+                    className="about-orbit"
+                    d="M13 55C18 38 39 29 69 32C93 34 99 45 91 57C81 72 48 80 24 71C15 68 11 62 13 55Z"
+                  />
+                  <path
+                    className="about-orbit about-orbit--soft"
+                    d="M26 72C25 52 41 24 66 18C84 14 95 22 90 35C84 51 57 69 37 75C31 77 27 76 26 72Z"
+                  />
+                  <path
+                    className="about-orbit about-orbit--lower"
+                    d="M18 63C24 48 48 43 70 48C92 53 99 66 87 77C74 89 42 87 24 74C18 70 16 66 18 63Z"
+                  />
+                </g>
 
                 {VISIBLE_CONCEPT_KEYS.map((key) => {
                   const linkIsActive = awakeConcept === key || activeRelation?.pair.includes(key)
@@ -603,6 +615,16 @@ export function About({ language }) {
                   aria-hidden="true"
                 />
               </div>
+
+              <svg
+                className="about-artwork-svg about-artwork-svg--front"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+              >
+                <g className="about-orbits about-orbits--front">
+                  <path className="about-orbit about-orbit--lower" d="M31 72C45 81 64 83 78 77" />
+                </g>
+              </svg>
             </div>
 
             <svg className="about-playground-connections" viewBox="0 0 100 100" aria-hidden="true">
@@ -625,7 +647,7 @@ export function About({ language }) {
 
               return (
                 <button
-                  className={`about-concept${isSelected ? ' is-selected' : ''}${isRelated ? ' is-related' : ''}${attentionConcept === key ? ' is-attention' : ''}${awakeConcept === key ? ' is-awake' : ''}`}
+                  className={`about-concept about-concept--${key}${isSelected ? ' is-selected' : ''}${isRelated ? ' is-related' : ''}${attentionConcept === key ? ' is-attention' : ''}${awakeConcept === key ? ' is-awake' : ''}`}
                   key={key}
                   type="button"
                   aria-pressed={Boolean(isSelected || isRelated)}
@@ -662,10 +684,10 @@ export function About({ language }) {
                 {activeRelation ? copy.relations[activeRelation.messageKey] : ''}
               </p>
               <div className="about-playground-controls">
-                <p className="about-playground-hint">{copy.hint}</p>
-                <button className="about-reset" type="button" onClick={resetInteraction}>
-                  {copy.reset}
-                </button>
+                <p className="about-playground-hint">
+                  <span className="about-playground-hint-desktop">{copy.hint}</span>
+                  <span className="about-playground-hint-touch">{copy.touchHint}</span>
+                </p>
               </div>
             </div>
           </div>

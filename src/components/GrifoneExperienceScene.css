@@ -1,0 +1,284 @@
+.grifone-experience {
+  --grifone-experience-safe-inset: clamp(0.4rem, 0.75vw, 0.7rem);
+  width: calc(100% + (var(--page-gutter) * 2));
+  height: min(95.5rem, 170vh);
+  min-height: 85rem;
+  margin-inline: calc(var(--page-gutter) * -1);
+  padding: 2rem calc(var(--page-gutter) + var(--grifone-experience-safe-inset)) 2.75rem;
+  overflow: clip;
+  background: #111111;
+  color: #f4f3ee;
+}
+
+.grifone-experience__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.05rem;
+  border-bottom: 1px solid rgba(244, 243, 238, 0.24);
+}
+
+.grifone-experience__header p,
+.grifone-experience__figure figcaption {
+  margin: 0;
+  font-family: var(--font-ui, 'Inter', Arial, sans-serif);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.grifone-experience__header p:first-child {
+  color: #c7ff00;
+}
+
+.grifone-experience__header p:last-child,
+.grifone-experience__figure figcaption {
+  color: #b8b8b2;
+}
+
+.grifone-experience__canvas {
+  position: relative;
+  height: calc(100% - 2rem);
+}
+
+.grifone-experience__title {
+  position: absolute;
+  top: 4.4rem;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(3rem, 3.8vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.88;
+}
+
+.grifone-experience__title span {
+  display: block;
+}
+
+.grifone-experience__figure {
+  position: absolute;
+  margin: 0;
+}
+
+.grifone-experience__figure figcaption {
+  position: absolute;
+  top: -1.45rem;
+  left: 0;
+}
+
+.grifone-experience__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grifone-experience__figure--hero {
+  top: 3.8rem;
+  right: 0;
+  z-index: 2;
+  width: 58%;
+}
+
+.grifone-experience__figure--documents {
+  top: 29.7rem;
+  left: 0;
+  z-index: 1;
+  width: 52%;
+}
+
+.grifone-experience__figure--send {
+  top: 43rem;
+  right: 1.5%;
+  z-index: 2;
+  width: 34%;
+}
+
+.grifone-experience__figure--contact {
+  top: 57rem;
+  right: 0;
+  z-index: 2;
+  width: 60%;
+}
+
+.grifone-experience__local {
+  position: absolute;
+  top: 60.5rem;
+  left: 0;
+  width: 30%;
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(2.1rem, 3.3vw, 3.15rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.88;
+}
+
+.grifone-experience__local p,
+.grifone-experience__closing p {
+  margin: 0;
+}
+
+.grifone-experience__closing {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(244, 243, 238, 0.24);
+  font-family: var(--font-display, 'Syne', 'Arial Black', Arial, sans-serif);
+  font-size: clamp(1.45rem, 2.15vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.grifone-experience__closing p + p {
+  margin-top: 0.35rem;
+  color: rgba(244, 243, 238, 0.72);
+}
+
+.grifone-experience__reveal {
+  animation: grifone-experience-reveal 720ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.grifone-experience__reveal--2 { animation-delay: 80ms; }
+.grifone-experience__reveal--3 { animation-delay: 150ms; }
+.grifone-experience__reveal--4 { animation-delay: 220ms; }
+.grifone-experience__reveal--5 { animation-delay: 290ms; }
+.grifone-experience__reveal--6 { animation-delay: 360ms; }
+.grifone-experience__reveal--7 { animation-delay: 430ms; }
+
+@media (max-width: 900px) {
+  .grifone-experience__figure--documents {
+    top: 27rem;
+  }
+
+  .grifone-experience__figure--send {
+    top: 38rem;
+  }
+
+  .grifone-experience__figure--contact {
+    top: 51rem;
+  }
+
+  .grifone-experience__local {
+    top: 54.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grifone-experience {
+    height: auto;
+    min-height: 0;
+    padding-bottom: 4rem;
+  }
+
+  .grifone-experience__header {
+    gap: 1rem;
+  }
+
+  .grifone-experience__header p:last-child {
+    max-width: 11rem;
+    text-align: right;
+  }
+
+  .grifone-experience__canvas {
+    display: flex;
+    height: auto;
+    padding-top: 3.5rem;
+    flex-direction: column;
+  }
+
+  .grifone-experience__title {
+    position: static;
+    order: 1;
+    width: 100%;
+    margin-bottom: 4rem;
+    font-size: clamp(2.65rem, 13.5vw, 3.3rem);
+    line-height: 0.9;
+  }
+
+  .grifone-experience__figure {
+    position: relative;
+    inset: auto;
+    z-index: auto;
+    margin-bottom: 3.5rem;
+  }
+
+  .grifone-experience__figure figcaption {
+    position: static;
+    margin-bottom: 0.7rem;
+  }
+
+  .grifone-experience__figure--hero {
+    order: 2;
+    width: 90%;
+    align-self: flex-end;
+  }
+
+  .grifone-experience__figure--documents {
+    order: 3;
+    width: 88%;
+    align-self: flex-start;
+  }
+
+  .grifone-experience__figure--send {
+    order: 4;
+    width: 92%;
+    align-self: flex-end;
+  }
+
+  .grifone-experience__figure--send img {
+    width: 122%;
+    max-width: none;
+    margin-left: -11%;
+  }
+
+  .grifone-experience__figure--contact {
+    order: 5;
+    width: 90%;
+    align-self: flex-start;
+  }
+
+  .grifone-experience__local {
+    position: static;
+    order: 6;
+    width: 72%;
+    margin: 0 0 3.5rem;
+    font-size: clamp(1.8rem, 9vw, 2.2rem);
+    line-height: 0.92;
+  }
+
+  .grifone-experience__closing {
+    position: static;
+    order: 7;
+    width: 100%;
+    font-size: clamp(1.25rem, 6vw, 1.55rem);
+    line-height: 1;
+  }
+}
+
+@keyframes grifone-experience-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grifone-experience__reveal {
+    animation: none;
+  }
+}

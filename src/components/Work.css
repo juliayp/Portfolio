@@ -234,7 +234,7 @@
 .work-case-link:focus-visible span:last-child,
 .work-live-link:hover span:last-child,
 .work-live-link:focus-visible span:last-child {
-  transform: translate(0.2rem, -0.2rem);
+  transform: translateY(-0.2rem);
 }
 
 .work-case-link:focus-visible,
