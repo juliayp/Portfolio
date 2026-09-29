@@ -1,5 +1,5 @@
 const sharedWork = Object.freeze({
-  sectionNumber: '04',
+  sectionNumber: '03',
   projectIndex: '01',
   title: 'CAFFÈ CARDUCCI',
   values: Object.freeze({
@@ -452,6 +452,11 @@ export const translations = {
         'Today, I bring those two sides together to create thoughtful digital experiences for real businesses.',
         'Every decision should have a reason, and every website should feel like it belongs to the business behind it.',
       ],
+      portraitAlt: 'Black-and-white portrait of Julia Yaneva',
+      portraitRole: 'FRONT-END DEVELOPER',
+      pricingTitle: 'PRICING WITHOUT SURPRISES',
+      pricingBody:
+        'I work directly with every client, without the costs and complexity of a large agency — with a clear process and a quote agreed before we begin.',
       meta: 'TUSCANY, ITALY · DESIGN + DEVELOPMENT · AVAILABLE REMOTELY',
       playgroundLabel: 'Interactive design concepts',
       selectConcept: 'Select concept',
@@ -475,31 +480,41 @@ export const translations = {
       },
     },
     approach: {
-      marker: '03 / APPROACH',
+      marker: '02 / APPROACH',
       kicker: 'HOW I WORK',
       titleLines: ['FROM CHARACTER,', 'TO EXPERIENCE.'],
       summary:
         'Every project starts with understanding your business — its character, goals and audience. From there, we move through a clear process from first ideas to a finished website.',
       principles: [
         {
-          title: 'DISCOVER',
-          description:
-            'We start with a conversation about your business, goals, audience and what the website needs to achieve.',
+          title: 'START',
+          headline: 'JUST TELL ME ABOUT YOUR BUSINESS.',
+          description: [
+            'Start with a simple email.\n“I sell Apple products — iPhone 16, 17, 18” is already enough.',
+            'From there, I’ll guide you through what I need — information, content and any photos or images you’d like to use.',
+          ],
         },
         {
-          title: 'DEFINE',
-          description:
-            'Together, we agree on a clear direction for the project — its style, structure, photos/images and priorities — before moving into development.',
+          title: 'DEFINE + DESIGN',
+          headline: 'WE AGREE ON THE DIRECTION.',
+          description: [
+            'Together, we define what the website needs to achieve, who it is for, and agree on its style, structure and priorities — before development begins.',
+          ],
         },
         {
-          title: 'DESIGN + BUILD',
-          description:
-            'I turn that direction into a responsive website, bringing design and development together as one connected process.',
+          title: 'BUILD',
+          headline: 'YOU SEE IT BEFORE I BUILD IT ALL.',
+          description: [
+            'I create the first key screen and show you the direction.\nOnce you’re happy with it, I turn our ideas into a responsive website — bringing the agreed style, content and goals together.',
+          ],
         },
         {
           title: 'TEST + LAUNCH',
-          description:
-            'I test the website across devices, refine the details and prepare everything for a confident launch.',
+          headline: 'READY TO GO LIVE.',
+          description: [
+            'I test the website across different screen sizes and prepare everything for launch.',
+            'You receive a finished website where every element has a reason to be there and a job to do.',
+          ],
         },
       ],
       closing: 'CLEAR PROCESS. OPEN COMMUNICATION. NO SURPRISES.',
@@ -710,14 +725,14 @@ export const translations = {
       },
     },
     clientVoice: {
-      marker: '05 / WHY IT MATTERS',
+      marker: '04 / WHY IT MATTERS',
       titleLines: ['A WEBSITE SHOULD', 'FEEL LIKE YOUR', 'BUSINESS. NOT MINE.'],
       supporting:
         'Every business has its own character. My job is not to impose a style, but to find the visual direction that belongs to yours — and turn it into a clear, memorable digital experience.',
       marquee: 'YOUR BUSINESS · YOUR CHARACTER · YOUR WEBSITE · YOUR EXPERIENCE ·',
     },
     contact: {
-      marker: '06 / CONTACT',
+      marker: '05 / CONTACT',
       titleLines: ['HAVE A PROJECT?', 'LET’S MAKE IT REAL.'],
       email: 'Julia.webcreative@gmail.com',
       emailHref: 'mailto:Julia.webcreative@gmail.com',
@@ -771,6 +786,11 @@ export const translations = {
         'Oggi unisco questi due aspetti per creare esperienze digitali curate per attività reali.',
         'Ogni scelta dovrebbe avere una ragione e ogni sito dovrebbe sembrare davvero appartenere all’attività che rappresenta.',
       ],
+      portraitAlt: 'Ritratto in bianco e nero di Julia Yaneva',
+      portraitRole: 'FRONT-END DEVELOPER',
+      pricingTitle: 'PREZZI SENZA SORPRESE',
+      pricingBody:
+        'Lavoro direttamente con ogni cliente, senza i costi e la complessità di una grande agenzia — con un processo chiaro e un preventivo definito prima di iniziare.',
       meta: 'TOSCANA, ITALIA · DESIGN + SVILUPPO · DISPONIBILE DA REMOTO',
       playgroundLabel: 'Concetti interattivi di design',
       selectConcept: 'Seleziona concetto',
@@ -794,31 +814,41 @@ export const translations = {
       },
     },
     approach: {
-      marker: '03 / APPROCCIO',
+      marker: '02 / APPROCCIO',
       kicker: 'COME LAVORO',
       titleLines: ['DAL CARATTERE,', 'ALL’ESPERIENZA.'],
       summary:
         'Ogni progetto inizia dalla comprensione della tua attività — il suo carattere, i suoi obiettivi e il suo pubblico. Da qui seguiamo un processo chiaro, dalle prime idee fino al sito completo.',
       principles: [
         {
-          title: 'SCOPERTA',
-          description:
-            'Iniziamo con una conversazione sulla tua attività, i tuoi obiettivi, il tuo pubblico e ciò che il sito deve raggiungere.',
+          title: 'INIZIO',
+          headline: 'PARLAMI SEMPLICEMENTE DELLA TUA ATTIVITÀ.',
+          description: [
+            'Inizia con una semplice email.\n«Vendo prodotti Apple — iPhone 16, 17, 18» è già sufficiente.',
+            'Da lì, ti guiderò passo dopo passo indicandoti ciò che mi serve — informazioni, contenuti ed eventuali foto o immagini che vorresti utilizzare.',
+          ],
         },
         {
-          title: 'DEFINIRE',
-          description:
-            'Insieme concordiamo una direzione chiara per il progetto — stile, struttura, foto/immagini e priorità — prima di passare allo sviluppo.',
+          title: 'DEFINIZIONE + DESIGN',
+          headline: 'CONCORDIAMO LA DIREZIONE.',
+          description: [
+            'Insieme definiamo gli obiettivi del sito e il suo pubblico, e concordiamo stile, struttura e priorità — prima di iniziare lo sviluppo.',
+          ],
         },
         {
-          title: 'DESIGN + SVILUPPO',
-          description:
-            'Trasformo questa direzione in un sito responsive, unendo design e sviluppo in un unico processo coerente.',
+          title: 'SVILUPPO',
+          headline: 'VEDI IL PROGETTO PRIMA CHE IO LO SVILUPPI TUTTO.',
+          description: [
+            'Creo la prima schermata chiave e ti mostro la direzione.\nQuando la direzione ti convince, trasformo le nostre idee in un sito responsive — unendo stile, contenuti e obiettivi concordati.',
+          ],
         },
         {
           title: 'TEST + LANCIO',
-          description:
-            'Testo il sito su diversi dispositivi, perfeziono i dettagli e preparo tutto per un lancio sicuro.',
+          headline: 'PRONTO PER ANDARE ONLINE.',
+          description: [
+            'Testo il sito su diverse dimensioni dello schermo e preparo tutto per il lancio.',
+            'Ricevi un sito web completo, in cui ogni elemento ha una ragione per esserci e una funzione da svolgere.',
+          ],
         },
       ],
       closing: 'PROCESSO CHIARO. COMUNICAZIONE APERTA. NESSUNA SORPRESA.',
@@ -1415,14 +1445,14 @@ export const translations = {
       },
     },
     clientVoice: {
-      marker: '05 / PERCHÉ CONTA',
+      marker: '04 / PERCHÉ CONTA',
       titleLines: ['UN SITO DOVREBBE', 'PARLARE DELLA TUA', 'ATTIVITÀ. NON DI ME.'],
       supporting:
         'Ogni attività ha un carattere unico. Il mio compito non è imporre uno stile, ma trovare la direzione visiva che le appartiene — e trasformarla in un’esperienza digitale chiara e memorabile.',
       marquee: 'IL TUO BUSINESS · IL TUO CARATTERE · IL TUO SITO · LA TUA ESPERIENZA ·',
     },
     contact: {
-      marker: '06 / CONTATTI',
+      marker: '05 / CONTATTI',
       titleLines: ['HAI UN PROGETTO?', 'RENDIAMOLO REALE.'],
       email: 'Julia.webcreative@gmail.com',
       emailHref: 'mailto:Julia.webcreative@gmail.com',

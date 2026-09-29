@@ -54,7 +54,18 @@ export function Approach({ language }) {
             <li className="approach-row" key={principle.title}>
               <span className="approach-index">{String(index + 1).padStart(2, '0')} /</span>
               <h3>{principle.title}</h3>
-              <p>{principle.description}</p>
+              {principle.headline ? (
+                <div className="approach-copy">
+                  <p className="approach-lead">{principle.headline}</p>
+                  {principle.description.map((paragraph) => (
+                    <p className="approach-description" key={paragraph}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <p>{principle.description}</p>
+              )}
             </li>
           ))}
         </ol>

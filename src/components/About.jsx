@@ -84,6 +84,7 @@ function clamp(value, min, max) {
 
 export function About({ language }) {
   const copy = translations[language].about
+  const contactCopy = translations[language].contact
   const playgroundRef = useRef(null)
   const sculptureRef = useRef(null)
   const positionsRef = useRef(createInitialPositions())
@@ -524,6 +525,19 @@ export function About({ language }) {
     </div>
   )
 
+  const renderEmailLink = (variant) => (
+    <a
+      className={`about-email-link about-email-link--${variant}`}
+      href={contactCopy.emailHref}
+      aria-label={contactCopy.emailLabel}
+    >
+      <span>{contactCopy.email}</span>
+      <svg className="about-email-link-arrow" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+        <path d="M5 9V1.25M1.75 4.5 5 1.25 8.25 4.5" />
+      </svg>
+    </a>
+  )
+
   return (
     <section className="about" id="about" aria-labelledby="about-title">
       <div className="about-inner shell">
@@ -539,10 +553,31 @@ export function About({ language }) {
                 </span>
               ))}
             </h2>
+            {renderEmailLink('responsive')}
           </div>
 
           <div className="about-bottom">
+            <figure className="about-portrait">
+              <img
+                className="about-portrait-image"
+                src="/images/about/julia-yaneva-portrait.png"
+                alt={copy.portraitAlt}
+              />
+              <figcaption className="about-portrait-caption">
+                <span>JULIA YANEVA</span>
+                <span>{copy.portraitRole}</span>
+              </figcaption>
+            </figure>
+
             {renderBio()}
+
+            <div className="about-pricing">
+              <h3 className="about-pricing-label">{copy.pricingTitle}</h3>
+              <p className="about-pricing-text">{copy.pricingBody}</p>
+            </div>
+
+            {renderEmailLink('desktop')}
+
             <p className="about-meta">{copy.meta}</p>
           </div>
 
