@@ -704,6 +704,15 @@ export const translations = {
             },
             closing: ['THE INTERFACE ENDS AT SEND.', 'THE WORKFLOW DOESN’T.'],
           },
+          testimonial: {
+            marker: '08 / CLIENT TESTIMONIAL',
+            direction: 'IN CARLO’S WORDS',
+            quote:
+              'The collaboration was excellent. Julia showed a great ability to listen and understand my operational needs. The site is modern, clear and professional: it turns the bureaucratic language of automotive paperwork into simple, immediate information. I would recommend her work without hesitation.',
+            author: 'CARLO BETTAZZI',
+            role: 'Owner, Pratiche Auto Grifone',
+            note: 'TRANSLATED AND EDITED FROM HIS ORIGINAL ITALIAN RESPONSES',
+          },
           close: 'CLOSE CASE STUDY',
         },
       },
@@ -1037,6 +1046,15 @@ export const translations = {
               cleanup: '→ SEMPRE ELIMINATI',
             },
             closing: ['L’INTERFACCIA FINISCE CON INVIA.', 'IL FLUSSO NO.'],
+          },
+          testimonial: {
+            marker: '08 / TESTIMONIANZA DEL CLIENTE',
+            direction: 'LE PAROLE DI CARLO',
+            quote:
+              'La collaborazione è stata eccellente. Julia ha dimostrato una grande capacità di ascolto e di comprensione delle mie esigenze operative. Il sito è moderno, chiaro e professionale: riesce a trasformare il linguaggio burocratico delle pratiche auto in informazioni semplici e immediate. Consiglierei il suo lavoro senza alcuna esitazione.',
+            author: 'CARLO BETTAZZI',
+            role: 'Titolare, Pratiche Auto Grifone',
+            note: 'ESTRATTO ADATTATO DALLE RISPOSTE ORIGINALI',
           },
           close: 'CHIUDI IL PROGETTO',
         },

@@ -6,6 +6,7 @@ import { GrifoneChallengeScene } from './GrifoneChallengeScene'
 import { GrifoneExperienceScene } from './GrifoneExperienceScene'
 import { GrifoneProjectScene } from './GrifoneProjectScene'
 import { GrifoneStructureScene } from './GrifoneStructureScene'
+import { GrifoneTestimonialScene } from './GrifoneTestimonialScene'
 import { GrifoneUnderHoodScene } from './GrifoneUnderHoodScene'
 import { GrifoneWorkflowScene } from './GrifoneWorkflowScene'
 import './Work.css'
@@ -255,6 +256,7 @@ export function Work({ language }) {
                   <GrifoneWorkflowScene copy={copy.grifone.caseStudy.workflow} />
                   <GrifoneBuildScene copy={copy.grifone.caseStudy.build} />
                   <GrifoneUnderHoodScene copy={copy.grifone.caseStudy.underHood} />
+                  <GrifoneTestimonialScene copy={copy.grifone.caseStudy.testimonial} />
                   <div className="case-study-close-wrap">
                     <button
                       className="case-study-close"
