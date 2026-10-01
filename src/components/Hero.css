@@ -450,6 +450,14 @@ h1 {
   white-space: nowrap;
 }
 
+/* Negative tracking lets the final glyph extend beyond the animation mask. */
+.hero-line--end,
+.hero-developer-mobile .hero-line {
+  max-width: calc(100% + 0.12em);
+  margin-right: -0.12em;
+  padding-right: 0.12em;
+}
+
 .hero-line-inner {
   display: block;
   transform: translateY(112%);
