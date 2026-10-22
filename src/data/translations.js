@@ -437,7 +437,7 @@ export const translations = {
       'I LOVE NATURE, PIZZA AND ART.',
     ],
     playWithMe: ['CLICK ME'],
-    scroll: 'SCROLL TO EXPLORE',
+    scroll: 'HOW WE WILL WORK',
     menu: 'MENU',
     close: 'CLOSE',
     about: {
@@ -780,7 +780,7 @@ export const translations = {
       'AMO LA NATURA, LA PIZZA E L’ARTE.',
     ],
     playWithMe: ['CLICCA QUI'],
-    scroll: 'SCORRI PER ESPLORARE',
+    scroll: 'COME LAVORIAMO',
     menu: 'MENU',
     close: 'CHIUDI',
     about: {

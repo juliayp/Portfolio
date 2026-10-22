@@ -496,7 +496,7 @@ export function Hero({ language, onLanguageChange, children }) {
                 {copy.description.map((line) => <p key={line}>{line}</p>)}
                 <p className="hero-tech">HTML · CSS · JAVASCRIPT · REACT</p>
               </div>
-              <a className="scroll-link" href="#work">
+              <a className="scroll-link" href="#approach">
                 {copy.scroll} <span aria-hidden="true">↓</span>
               </a>
             </div>
